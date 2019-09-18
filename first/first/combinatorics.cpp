@@ -12,3 +12,18 @@ int razmeshenie(int n, int k)
 {
 	return factorial(n) / factorial(n - k);
 }
+
+int perestanovka(int n)
+{
+	return factorial(n);
+}
+
+int sochetanie(int n, int k)
+{
+	return factorial(n) / (factorial(k)*(n - k));
+}
+
+int razbienie(int n, int k)
+{
+	return factorial(n)/
+}
