@@ -11,6 +11,3 @@ int perestanovka(int n);
 
 //sochetanie
 int sochetanie(int n, int k);
-
-//razbienie
-int razbienie(int n, int k);

@@ -126,10 +126,14 @@
     <ClCompile Include="combinatorics.cpp" />
     <ClCompile Include="inputOutput.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="myMath.cpp" />
+    <ClCompile Include="oge.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="combinatorics.h" />
     <ClInclude Include="introduction.h" />
+    <ClInclude Include="myMath.h" />
+    <ClInclude Include="oge.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

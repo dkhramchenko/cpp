@@ -24,12 +24,24 @@
     <ClCompile Include="combinatorics.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="myMath.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="oge.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="introduction.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="combinatorics.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="myMath.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="oge.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
