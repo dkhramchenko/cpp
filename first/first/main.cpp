@@ -13,6 +13,6 @@ int main()
 	{
 		cin >> a[i];
 	}
-	cout << task1(a, 5);
+	cout << task11(a, 5);
 	return 0;
 }
