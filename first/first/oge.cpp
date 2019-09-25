@@ -67,12 +67,14 @@ int task5(int* a, int size)
 
 int task6(int* a, int size)
 {
-	int m = INT_MIN;
+	int m1 = INT_MIN;
+	int m2 = INT_MIN;
 	int k1 = 0;
 	int k2 = 0;
 	int s = 0;
 	for (int i = 0; i < size; i++)
 	{
+		s += a[i];
 		if (a[i] % 2 == 0)
 		{
 			k1++;
@@ -81,20 +83,27 @@ int task6(int* a, int size)
 		{
 			k2++;
 		}
-		if (a[i] % 2 == 0 && k1 > k2)
+		if (a[i] % 2 == 0 && a[i] > m1)
 		{
-			m = a[i];
+			m1 = a[i];
 		}
-		if (a[i] % 2 != 0 && k1 < k2)
+		if (a[i] % 2 != 0 && a[i] > m2)
 		{
-			m = a[i];
+			m2 = a[i];
 		}
 	}
 	if (k1 == k2)
 	{
 		return s;
 	}
-	return m;
+	if (k1 > k2)
+	{
+		return m1;
+	}
+	if (k2 > k1)
+	{
+		return m2;
+	}
 }
 	
 	
@@ -119,7 +128,7 @@ int task7(int* a, int size)
 int task8(int* a, int size)
 {
 	double prosent = 0;
-	int k= 0;
+	int k = 0;
 	for (int i = 0; i < size; i++)
 	{
 		if (a[i] > 0)

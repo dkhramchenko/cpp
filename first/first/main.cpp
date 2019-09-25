@@ -8,11 +8,12 @@ using namespace std;
 
 int main()
 {
-	int a[5];
-	for (int i = 0; i < 5; i++)
+	int const n = 6;
+	int a[n];
+	for (int i = 0; i < n; i++)
 	{
 		cin >> a[i];
 	}
-	cout << task11(a, 5);
+	cout << task6(a, n);
 	return 0;
 }
