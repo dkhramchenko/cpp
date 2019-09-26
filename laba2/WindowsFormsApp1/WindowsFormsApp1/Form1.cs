@@ -24,8 +24,10 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string s = string.Format("{0}\t{1}", textBox1.Text, richTextBox1.Text);
-            comboBox1.Items.Add(s);
+            string all = string.Format("{0}\t{1}", textBox1.Text, richTextBox1.Text);
+            string fio = textBox1.Text;
+            comboBox1.Items.Add(fio);
+            listBox1.Items.Add(all);
             button2.Visible = true;
         }
 
@@ -44,6 +46,21 @@ namespace WindowsFormsApp1
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_Click(object sender, EventArgs e)
+        {
+            if (listBox1.Items.Count != 0)
+            {
+                richTextBox1.Clear();
+                richTextBox1.Text = listBox1.SelectedItem.ToString();
+                listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+            }
         }
     }
 }
