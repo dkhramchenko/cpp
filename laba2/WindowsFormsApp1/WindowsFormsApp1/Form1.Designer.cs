@@ -40,16 +40,18 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(59, 119);
+            this.textBox1.Location = new System.Drawing.Point(30, 62);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(305, 31);
+            this.textBox1.Size = new System.Drawing.Size(154, 20);
             this.textBox1.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(59, 397);
+            this.button1.Location = new System.Drawing.Point(30, 206);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(301, 43);
+            this.button1.Size = new System.Drawing.Size(150, 22);
             this.button1.TabIndex = 1;
             this.button1.Text = "Записать в список";
             this.button1.UseVisualStyleBackColor = true;
@@ -57,35 +59,40 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(59, 225);
+            this.richTextBox1.Location = new System.Drawing.Point(30, 117);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(301, 115);
+            this.richTextBox1.Size = new System.Drawing.Size(152, 62);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(556, 82);
+            this.comboBox1.Location = new System.Drawing.Point(278, 43);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(420, 33);
+            this.comboBox1.Size = new System.Drawing.Size(212, 21);
             this.comboBox1.TabIndex = 3;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 27);
+            this.label1.Location = new System.Drawing.Point(17, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(248, 25);
+            this.label1.Size = new System.Drawing.Size(126, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Сведения о сотруднике";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(59, 472);
+            this.button2.Location = new System.Drawing.Point(30, 245);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(291, 48);
+            this.button2.Size = new System.Drawing.Size(146, 25);
             this.button2.TabIndex = 5;
             this.button2.Text = "Очистить окна";
             this.button2.UseVisualStyleBackColor = true;
@@ -94,26 +101,28 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(68, 82);
+            this.label2.Location = new System.Drawing.Point(34, 43);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 25);
+            this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "ФИО";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 178);
+            this.label3.Location = new System.Drawing.Point(17, 93);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 25);
+            this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Сведения";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1046, 592);
+            this.ClientSize = new System.Drawing.Size(523, 308);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
@@ -122,6 +131,7 @@
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

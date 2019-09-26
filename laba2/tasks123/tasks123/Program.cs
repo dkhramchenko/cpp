@@ -10,7 +10,12 @@ namespace tasks123
     {
         static void Main(string[] args)
         {
+            Task1();
             Task2();
+            Task31();
+            Task32();
+            Task33();
+            Task34();
             Console.ReadKey();
         }
         static void Task1()

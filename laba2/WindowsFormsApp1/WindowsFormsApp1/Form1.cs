@@ -40,5 +40,10 @@ namespace WindowsFormsApp1
             richTextBox1.Clear();
             button2.Visible = false;
         }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
