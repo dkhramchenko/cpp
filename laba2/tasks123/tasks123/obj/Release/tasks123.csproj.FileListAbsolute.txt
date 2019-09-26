@@ -1,0 +1,5 @@
+C:\gh\dasha\cpp\laba2\tasks123\tasks123\bin\Release\tasks123.exe.config
+C:\gh\dasha\cpp\laba2\tasks123\tasks123\bin\Release\tasks123.exe
+C:\gh\dasha\cpp\laba2\tasks123\tasks123\bin\Release\tasks123.pdb
+C:\gh\dasha\cpp\laba2\tasks123\tasks123\obj\Release\tasks123.exe
+C:\gh\dasha\cpp\laba2\tasks123\tasks123\obj\Release\tasks123.pdb
