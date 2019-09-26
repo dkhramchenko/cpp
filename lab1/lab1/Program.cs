@@ -10,9 +10,12 @@ namespace lab1
     {
         static void Main(string[] args)
         {
-            int x = Convert.ToInt32(1.3);
-            Console.WriteLine(x);
-            Console.ReadKey();
+            Task1();
+            Task2();
+            task3();
+            task31();
+            task32();
+            Console.ReadLine();
         }
         static void Task1()
         {

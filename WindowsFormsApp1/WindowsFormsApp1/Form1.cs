@@ -21,5 +21,10 @@ namespace WindowsFormsApp1
         {
             
         }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
+        }
     }
 }
