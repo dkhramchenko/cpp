@@ -19,7 +19,48 @@ namespace WindowsFormsApp3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            textBox1.BackColor = Color.Red;
+            textBox1.Text = e.ToString();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            textBox1.BackColor = Color.Green;
+            textBox1.Text = e.KeyCode.ToString();
+        }
+
+        private void textBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            textBox1.BackColor = Color.Bisque;
+            textBox1.Text = e.X + " " + e.Y;
+        }
+
+        private void textBox1_DoubleClick(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+        }
+
+        private void listBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            textBox1.Text = listBox1.SelectedItem.ToString();
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == 'g')
+            {
+                this.BackColor = Color.Aqua;
+            }
         }
     }
 }
