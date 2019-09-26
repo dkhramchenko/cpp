@@ -30,5 +30,31 @@ namespace tasks123
             Console.WriteLine("{0}{1}{2}", b, c, d);
             Console.WriteLine("{0}{1}{2}", char.ToLower(b), char.ToUpper(c), char.GetNumericValue(d));
         }
+        static void Task31()
+        {
+            string s = "изучайте языки программирования";
+            Console.WriteLine(s);
+            string sub = s.Substring(15);
+            Console.WriteLine(sub);
+        }
+        static void Task32()
+        {
+            string s = "изучайте языки программирования";
+            Console.WriteLine(s);
+            string sub = "любые";
+            Console.WriteLine(s.Insert(9, sub));
+        }
+        static void Task33()
+        {
+            string s = "бом бом бом";
+            Console.WriteLine(s);
+            Console.WriteLine(s.Replace('о', 'у'));
+        }
+        static void Task34()
+        {
+            string s = "все любят несладкое";
+            Console.WriteLine(s);
+            Console.WriteLine(s.Remove(10, 2));
+        }
     }
 }
