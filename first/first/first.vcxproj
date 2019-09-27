@@ -126,14 +126,21 @@
     <ClCompile Include="combinatorics.cpp" />
     <ClCompile Include="inputOutput.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="massiv.cpp" />
     <ClCompile Include="myMath.cpp" />
     <ClCompile Include="oge.cpp" />
+    <ClCompile Include="sequence.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="combinatorics.h" />
     <ClInclude Include="introduction.h" />
+    <ClInclude Include="massiv.h" />
     <ClInclude Include="myMath.h" />
     <ClInclude Include="oge.h" />
+    <ClInclude Include="sequence.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="hw1.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
