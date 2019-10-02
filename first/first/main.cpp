@@ -10,6 +10,21 @@ using namespace std;
 
 int main()
 {
-	sequence::task340();
+	cout << 1 * 1 << " ";
+	cout << 2 * 2 << " ";
+	cout << 3 * 3 << " ";
+	cout << 4 * 4 << " ";
+	cout << 5 * 5 << " ";
+
+	cout << endl;
+
+	int i = 1;
+	while (i <= 5)
+	{
+		cout << i * i << " ";
+		++i;
+	}
+	cout << endl;
+
 	return 0;
 }

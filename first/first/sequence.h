@@ -20,4 +20,12 @@ namespace sequence
 	void task341();
 
 	void task461();
+
+	void task361();
+
+	void task421();
+
+	void task441();
+
+	void task481();
 }
