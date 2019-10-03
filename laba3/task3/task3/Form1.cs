@@ -28,7 +28,7 @@ namespace task3
                 double priceUSD = Convert.ToDouble(textBox1.Text);
                 double rate = Convert.ToDouble(textBox2.Text);
                 double rub = priceUSD * rate;
-                label4.Text = textBox1.Text + " USD = " + rub.ToString() + "р.";
+                label4.Text = String.Format("{0} USD = {1}р.", priceUSD, rub);
             }
         }
 
