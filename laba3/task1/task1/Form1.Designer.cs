@@ -66,6 +66,7 @@
             // 
             // button1
             // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Location = new System.Drawing.Point(500, 285);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(226, 59);
@@ -76,7 +77,7 @@
             // 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.radioButton1);
             this.panel1.Controls.Add(this.radioButton2);
             this.panel1.Location = new System.Drawing.Point(41, 48);
@@ -102,7 +103,7 @@
             // 
             // panel2
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Location = new System.Drawing.Point(41, 285);
             this.panel2.Name = "panel2";
