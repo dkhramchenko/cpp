@@ -25,7 +25,12 @@ int main()
 		++i;
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 	sequence::task20();
+=======
+	cout << endl;
+
+>>>>>>> parent of 08695f4... dz
 =======
 	cout << endl;
 
