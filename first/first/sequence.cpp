@@ -288,4 +288,110 @@ namespace sequence
 		cout << endl;
 		cout << kol;
 	}
+
+	void task521()
+	{
+		int number = 0;
+		int sum = 0;
+		int raz = 0;
+		int kol1 = 0;
+		int kol2 = 0;
+		cin >> number;
+		while (number != 0)
+		{
+			sum = sum + number;
+			if (number > 0 )
+			{
+				kol1++;
+			}
+			if (number < 0)
+			{
+				kol2++;
+			}
+			cin >> number;
+		}
+		raz = kol1 - kol2;
+		cout << sum;
+		cout << endl;
+		cout << raz;
+	}
+
+	void task621()
+	{
+		int number = 0;
+		int sum = 0;
+		cin >> number;
+		while (number != 0)
+		{
+			if (number % 6 == 0 && number % 10 == 4)
+			{
+				sum = sum + number;
+			}
+			cin >> number;
+		}
+		cout << sum;
+	}
+
+	void task681()
+	{
+		int number = 0;
+		int sum = 0;
+		for (int i = 0; i < 5; i++)
+		{
+			cin >> number;
+			if (number % 4 == 0 && number % 10 == 6)
+			{
+				sum = sum + number;
+			}
+		}
+		cout << sum;
+	}
+
+	void task721()
+	{
+		int number = 0;
+		int min = INT_MAX;
+		int amount = 0;
+		cin >> amount;
+		for (int i = 0; i < amount; i++)
+		{
+			cin >> number;
+			if (number % 10 == 4 && number < min)
+			{
+				min = number;
+			}
+		}
+		cout << min;
+	}
+
+	void task1071()
+	{
+		int number = 0;
+		int amountOfZero = 0;
+		int amount = 0;
+		int max = 0;
+		cin >> amount;
+		for (int i = 0; i < amount; i++)
+		{
+			cin >> number;
+			if (number > max)
+			{
+				max = number;
+			}
+			if (number == 0)
+			{
+				amountOfZero++;
+			}
+		}
+		cout << max;
+		cout << endl;
+		if (amountOfZero > 0)
+		{
+			cout << "YES";
+		}
+		else
+		{
+			cout << "NO";
+		}
+	}
 }
