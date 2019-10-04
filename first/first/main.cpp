@@ -17,6 +17,6 @@ int main()
 	{
 		cin >> a[i];
 	}
-	cout << task20(a, n);
+	sequence::task20();
 	return 0;
 }
