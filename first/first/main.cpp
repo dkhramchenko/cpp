@@ -10,6 +10,6 @@ using namespace std;
 
 int main()
 {
-	sequence::task1071();
+	sequence::task5085();
 	return 0;
 }

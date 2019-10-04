@@ -394,4 +394,50 @@ namespace sequence
 			cout << "NO";
 		}
 	}
+
+	void task1253()
+	{
+		int number = 0;
+		int sum = 0;
+		int amount = 0;
+
+		cin >> number;
+		while (number != 0)
+		{
+			if (number % 8 == 0)
+			{
+				sum += number;
+				++amount;
+			}
+			cin >> number;
+		}
+
+		if (amount == 0)
+		{
+			cout << "NO";
+		}
+		else
+		{
+			double mean = double(sum) / amount;
+			cout << int(mean * 10) / 10.0;
+		}
+	}
+
+	void task5085()
+	{
+		int a = 0;
+		int b = 0;
+		int amountOfEven = 0;
+		cin >> a >> b;
+
+		for (int number = a; number <= b; number++)
+		{
+			if (number % 2 == 0)
+			{
+				++amountOfEven;
+			}
+		}
+
+		cout << amountOfEven;
+	}
 }

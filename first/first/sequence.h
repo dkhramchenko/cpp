@@ -38,4 +38,8 @@ namespace sequence
 	void task721();
 
 	void task1071();
+
+	void task1253();
+
+	void task5085();
 }
