@@ -41,12 +41,12 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 25;
             this.listBox1.Items.AddRange(new object[] {
-            "Вопрос1",
-            "Вопрос2",
-            "Вопрос3"});
+            "Любите яблоки?",
+            "Вы умный?",
+            "Вы бот?"});
             this.listBox1.Location = new System.Drawing.Point(77, 46);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 104);
+            this.listBox1.Size = new System.Drawing.Size(206, 104);
             this.listBox1.TabIndex = 0;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
