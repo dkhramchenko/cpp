@@ -28,14 +28,4 @@ namespace sequence
 	void task441();
 
 	void task481();
-
-	void task521();
-
-	void task621();
-
-	void task681();
-
-	void task721();
-
-	void task1071();
 }
