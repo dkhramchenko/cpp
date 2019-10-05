@@ -36,8 +36,15 @@ namespace task3
                             double price = litr * tank;
                             double cash = Convert.ToDouble(textBox1.Text);
                             double sdacha = cash - price;
-                            label3.Text = String.Format("Литров: {0:f2}\nСумма: {1:f2}р.\nСдача: {2:f2}р.\nЦена за литр: {3:f2}р.",
-                                tank, cash, sdacha, litr);
+                            if (sdacha < 0)
+                            {
+                                System.Windows.Forms.MessageBox.Show("Не хватает денег!");
+                            }
+                            else
+                            {
+                                label3.Text = String.Format("Литров: {0:f2}\nСумма: {1:f2}р.\nСдача: {2:f2}р.\nЦена за литр: {3:f2}р.",
+                                    tank, cash, sdacha, litr);
+                            }
                             break;
                         }
                     case "95":
@@ -47,9 +54,15 @@ namespace task3
                             double price = litr * tank;
                             double cash = Convert.ToDouble(textBox1.Text);
                             double sdacha = cash - price;
-
-                            label3.Text = String.Format("Литров: {0:f2}\nСумма: {1:f2}р.\nСдача: {2:f2}р.\nЦена за литр: {3:f2}р.",
+                            if (sdacha < 0)
+                            {
+                                System.Windows.Forms.MessageBox.Show("Не хватает денег!");
+                            }
+                            else
+                            {
+                                label3.Text = String.Format("Литров: {0:f2}\nСумма: {1:f2}р.\nСдача: {2:f2}р.\nЦена за литр: {3:f2}р.",
                                 tank, cash, sdacha, litr);
+                            }
                             break;
                         }
                     case "98":
@@ -59,8 +72,15 @@ namespace task3
                             double price = litr * tank;
                             double cash = Convert.ToDouble(textBox1.Text);
                             double sdacha = cash - price;
-                            label3.Text = String.Format("Литров: {0:f2}\nСумма: {1:f2}р.\nСдача: {2:f2}р.\nЦена за литр: {3:f2}р.",
-                                tank, cash, sdacha, litr);
+                            if (sdacha < 0)
+                            {
+                                System.Windows.Forms.MessageBox.Show("Не хватает денег!");
+                            }
+                            else
+                            {
+                                label3.Text = String.Format("Литров: {0:f2}\nСумма: {1:f2}р.\nСдача: {2:f2}р.\nЦена за литр: {3:f2}р.",
+                                    tank, cash, sdacha, litr);
+                            }
                             break;
                         }
                     case "ДТ":
@@ -70,8 +90,15 @@ namespace task3
                             double price = litr * tank;
                             double cash = Convert.ToDouble(textBox1.Text);
                             double sdacha = cash - price;
-                            label3.Text = String.Format("Литров: {0:f2}\nСумма: {1:f2}р.\nСдача: {2:f2}р.\nЦена за литр: {3:f2}р.",
-                                tank, cash, sdacha, litr);
+                            if (sdacha < 0)
+                            {
+                                System.Windows.Forms.MessageBox.Show("Не хватает денег!");
+                            }
+                            else
+                            {
+                                label3.Text = String.Format("Литров: {0:f2}\nСумма: {1:f2}р.\nСдача: {2:f2}р.\nЦена за литр: {3:f2}р.",
+                                    tank, cash, sdacha, litr);
+                            }
                             break;
                         }
                 }
