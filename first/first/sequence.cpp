@@ -635,4 +635,93 @@ namespace sequence
 			cout << "NO";
 		}
 	}
+
+	void ege9209()
+	{
+		
+		int number=0;
+		int amount = 0;
+		int sum = 0;
+		int k1 = 0;
+		int k2 = 0;
+		cin >> amount;;
+		for (int i = 0; i < amount; i++)
+		{
+			cin >> number;
+			sum = sum + number;
+			if (number % 2 == 0)
+			{
+				k1++;
+			}
+			else
+			{
+				k2++;
+			}
+
+		}
+		
+		if (sum % 2 == 0)
+		{
+			cout << k1;
+		}
+		else
+		{
+			cout << k2;
+		}
+	}
+
+	void ege2907()
+	{
+		int number = 0;
+		int raz = 0;
+		int max1 = INT_MIN;
+		int max2 = INT_MIN;
+		int amount = 0;
+		cin >> amount;
+		for (int i = 0; i < amount; i++)
+		{
+			cin >> number;
+			if (number % 2 == 0 && number > max1)
+			{
+				max1 = number;
+			}
+			//continue;
+			if (number % 2 != 0 && number > max2)
+			{
+				max2 = number;
+			}
+		}
+		raz = max1 - max2;
+		cout << raz;
+	}
+
+	void in9209(int* a, int size)
+	{
+		int sum = 0;
+		int k1 = 0;
+		int k2 = 0;
+		for (int i = 0; i < size; i++)
+		{
+			cin >> a[i];
+			sum = sum + a[i];
+			if (a[i] % 2 == 0)
+			{
+				k1++;
+			}
+			else
+			{
+				k2++;
+			}
+
+		}
+
+		if (sum % 2 == 0)
+		{
+			cout << k1;
+		}
+		else
+		{
+			cout << k2;
+		}
+	}
 }

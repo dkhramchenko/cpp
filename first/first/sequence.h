@@ -64,4 +64,13 @@ namespace sequence
 	void task541();
 
 	void task381();
+
+	//работает
+	void ege9209();
+
+	//не получилось
+	void ege2907();
+	
+	//ege9209 не получилось 
+	void in9209(int* a, int size);
 }
