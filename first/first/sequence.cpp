@@ -440,4 +440,199 @@ namespace sequence
 
 		cout << amountOfEven;
 	}
+
+	void task4609()
+	{
+		int number = 0;
+		int amount = 0;
+		cin >> number;
+		while (number != 0)
+		{
+			if (number % 5 == 0 || number % 9 == 0)
+			{
+				amount++;
+			}
+			cin >> number;
+		}
+		cout << amount;
+	}
+
+	void task1114()
+	{
+		int number = 0;
+		int amount = 0;
+		int k = 0;
+		cin >> amount;
+		for (int i = 0; i < amount; i++)
+		{
+			cin >> number;
+			if (number % 3 == 0 && number % 10 == 2)
+			{
+				k++;
+			}
+		}
+		cout << k;
+	}
+
+	void task80()
+	{
+		int number = 0;
+		int amount = 0;
+		int min = INT_MAX;
+		cin >> amount;
+		for (int i = 0; i < amount; i++)
+		{
+			cin >> number;
+			if (number % 3 == 0 && number < min)
+			{
+				min = number;
+			}
+		}
+		cout << min;
+	}
+
+	void task1273()
+	{
+		int number = 0;
+		int sum = 0;
+		cin >> number;
+		while (number != 0)
+		{
+			if (number % 8 == 0 && number > 9 && number < 100)
+			{
+				sum = sum + number;
+			}
+			cin >> number;
+		}
+		cout << sum;
+	}
+
+	void task959()
+	{
+		int number = 0;
+		int sum = 0;
+		cin >> number;
+		while (number != 0)
+		{
+			if (number % 7 == 0 && number % 10 == 1)
+			{
+				sum = sum + number;
+			}
+			cin >> number;
+		}
+		cout << sum;
+	}
+
+	void task836()
+	{
+		int number = 0;
+		int sum = 0;
+		cin >> number;
+		while (number != 0)
+		{
+			if (number % 4 == 0 && number % 10 == 8)
+			{
+				sum = sum + number;
+			}
+			cin >> number;
+		}
+		cout << sum;
+	}
+
+	void task220()
+	{
+		int number = 0;
+		int amount = 0;
+		int min = INT_MAX;
+		cin >> amount;
+		for (int i = 0; i < amount; i++)
+		{
+			cin >> number;
+			if (number < min && number % 10 == 6)
+			{
+				min = number;
+			}
+		}
+		cout << min;
+	}
+
+	void task501()
+	{
+		int number = 0;
+		int k = 0;
+		int sum = 0;
+		cin >> number;
+		while (number != 0)
+		{
+			k++;
+			if (number % 2 == 0)
+			{
+				sum = sum + number;
+			}
+			cin >> number;
+		}
+		cout << k << endl << sum;
+	}
+
+	void task1174()
+	{
+
+		int number = 0;
+		int k = 0;
+		cin >> number;
+		while (number != 0)
+		{
+			
+			if (number % 4 == 0 && number > 99 && number < 1000)
+			{
+				k++;
+			}
+			cin >> number;
+		}
+		cout << k;
+	}
+
+	void task541()
+	{
+		int number = 0;
+		int k = 0;
+		int sum = 0;
+		cin >> number;
+		while (number != 0)
+		{
+			k++;
+			if (number > 0 && number % 2 == 0 && number < 256)
+			{
+				sum = sum + number;
+			}
+			cin >> number;
+		}
+		cout << k << endl << sum;
+	}
+
+	void task381()
+	{
+		int speed = 0;
+		int min = INT_MAX;
+		int amount = 0;
+		cin >> amount;
+		for (int i = 0; i < amount; i++)
+		{
+			cin >> speed;
+			if (speed < min)
+			{
+				min = speed;
+			}
+		}
+		cout << min;
+		cout << endl;
+		if (speed > 80)
+		{
+			cout << "YES";
+		}
+		else
+		{
+			cout << "NO";
+		}
+	}
 }

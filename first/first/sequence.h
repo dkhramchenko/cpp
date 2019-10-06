@@ -42,4 +42,26 @@ namespace sequence
 	void task1253();
 
 	void task5085();
+
+	void task4609();
+
+	void task1114();
+
+	void task80();
+
+	void task1273();
+
+	void task959();
+
+	void task836();
+
+	void task220();
+
+	void task501();
+
+	void task1174();
+
+	void task541();
+
+	void task381();
 }
