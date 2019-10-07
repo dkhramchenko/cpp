@@ -49,5 +49,10 @@ namespace task4
                 label3.Text = String.Format("Размер: {0:f2} x {1:f2} см\nМатериал: {2}\nСтоимость: {3:f2}р.", width, height, mat, price);
             }
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            radioButton1.Checked = true;
+        }
     }
 }

@@ -110,9 +110,8 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label3.Location = new System.Drawing.Point(36, 274);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 36);
+            this.label3.Size = new System.Drawing.Size(2, 27);
             this.label3.TabIndex = 7;
-            this.label3.Text = "ddd";
             // 
             // Form1
             // 
@@ -129,6 +128,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Жалюзи";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
