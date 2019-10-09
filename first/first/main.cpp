@@ -5,18 +5,19 @@
 #include "oge.h"
 #include "massiv.h"
 #include "sequence.h"
+#include "ege25.h"
 
 using namespace std;
 
 int main()
 {
-	int const N;
-	int a[N];
-	for (int i = 0; i < N; i++)
-	{
-		cin >> a[i];
-	}
-	cout << in9209(a, N);
-	//sequence::task20();
+	/*int size = 0;
+	cin >> size;
+	int* a = new int[size];*/
+
+	/*int const size = 6;
+	int a[size];*/
+
+	ege::ege3622array();
 	return 0;
 }
