@@ -48,6 +48,11 @@ namespace task2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (listBox1.SelectedItem == null)
+            {
+                System.Windows.Forms.MessageBox.Show("Выберите цвет!");
+                return;
+            }
             string color1, color2;
             color1 = listBox1.SelectedItem.ToString();
             label1.ForeColor = Color.FromName(color1);
