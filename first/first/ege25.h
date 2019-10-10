@@ -25,4 +25,24 @@ namespace ege
 	void ege2901array();
 
 	void ege3622array();
+
+	void ege7709array();
+
+	void ege7797array();
+
+	void ege8113array();
+
+	void ege6936array();
+
+	void ege11361array();
+
+	void ege9317array();
+
+	void ege2909array();
+
+	void ege2925array();
+
+	void ege7214array();
+
+	void ege7383array();
 }
