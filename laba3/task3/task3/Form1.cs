@@ -36,5 +36,10 @@ namespace task3
         {
             Application.Exit();
         }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

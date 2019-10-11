@@ -38,5 +38,10 @@ namespace task4
                 label5.Text = String.Format("Сумма к оплате: {0:f2}р.", cash);
             }
         }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

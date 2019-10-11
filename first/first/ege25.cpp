@@ -594,4 +594,6 @@ namespace ege
 		double sr2 = double(sum2) / amount2;
 		cout << sr1 << endl << sr2;
 	}
+
+
 }
