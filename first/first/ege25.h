@@ -45,4 +45,22 @@ namespace ege
 	void ege7214array();
 
 	void ege7383array();
+
+	void ege5289array();
+
+	void ege10399array();
+
+	void ege13636array();
+
+	int len10(int x);
+
+	int len8(int x);
+
+	void ege14711array();
+
+	void ege15865array();
+
+	void ege2907array();
+
+	void ege7936array();
 }

@@ -413,7 +413,7 @@ namespace ege
 		}
 		for (int i = 0; i < size - 1; i++)
 		{
-			int raz = a[i + 1] - a[i];
+			int raz = abs(a[i + 1] - a[i]);
 			if (raz > max)
 			{
 				max = raz;
@@ -579,12 +579,12 @@ namespace ege
 
 		for (int i = 0; i < size - 1; i++)
 		{
-			if (a[i] = 4)
+			if (a[i] == 4)
 			{
 				++amount1;
 				sum1 = sum1 + a[i];
 			}
-			if (a[i] = 5)
+			if (a[i] == 5)
 			{
 				++amount2;
 				sum2 = sum2 + a[i];
@@ -595,5 +595,250 @@ namespace ege
 		cout << sr1 << endl << sr2;
 	}
 
+	void ege5289array()
+	{
+		int size = 0;
+		cin >> size;
+		int* a = new int[size];
+		int sum = 0;
+		for (int i = 0; i < size; i++)
+		{
+			cin >> a[i];
+		}
+		for (int i = 0; i < size; i++)
+		{
+			int e = a[i] % 10;
+			int d = (a[i] / 10) % 10;
+			if (a[i] > 9 && a[i]<100 && d>e)
+			{
+				sum = sum + a[i];
+			}
+		}
+		cout << sum;
+	}
 
+	void ege10399array()
+	{
+		int size = 0;
+		cin >> size;
+		int* a = new int[size];
+		int sum = 0;
+		int max = INT_MIN;
+		for (int i = 0; i < size; i++)
+		{
+			cin >> a[i];
+		}
+		for (int i = 0; i < size; i++)
+		{
+			if (a[i] > max)
+			{
+				max = a[i];
+			}
+			
+		}
+		for (int i = 0; i < size; i++)
+		{
+			if (a[i] % 2 == max % 2)
+			{
+				sum = a[i] + sum;
+			}
+
+		}
+		cout << sum;
+	}
+
+	void ege13636array()
+	{
+		int size = 0;
+		cin >> size;
+		int* a = new int[size];
+		int sum = 0;
+		for (int i = 0; i < size; i++)
+		{
+			cin >> a[i];
+		}
+		for (int i = 0; i < size; i++)
+		{
+			if (pow(16, 2) <= a[i] && a[i] < pow(16, 3))
+			{
+				sum = sum + a[i];
+			}
+		}
+		cout << sum;
+	}
+
+	int len10(int x)
+	{
+		int l = 0;
+		while (x != 0)
+		{
+			l++;
+			x = x / 10;
+		}
+		return l;
+	}
+
+	int len8(int x)
+	{
+		int l = 0;
+		while (x != 0)
+		{
+			l++;
+			x = x / 8;
+		}
+		return l;
+	}
+
+	void ege14711array()
+	{
+		int size = 0;
+		cin >> size;
+		int* a = new int[size];
+		int amount = 0;
+		for (int i = 0; i < size; i++)
+		{
+			cin >> a[i];
+		}
+		for (int i = 0; i < size; i++)
+		{
+			if (len8(a[i]) == len10(a[i]))
+			{
+				amount++;
+			}
+		}
+		cout << amount;
+	}
+
+	void ege15865array()
+	{
+		int size = 0;
+		cin >> size;
+		int* a = new int[size];
+		int sum = 0;
+		for (int i = 0; i < size; i++)
+		{
+			cin >> a[i];
+		}
+		for (int i = 0; i < size; i++)
+		{
+			if (a[i] < 200 && a[i] % 5 == 0)
+			{
+				sum = sum + a[i];
+			}
+		}
+		for (int i = 0; i < size; i++)
+		{
+			if (a[i] < 200 && a[i] % 5 == 0)
+			{
+				a[i] = sum;
+			}
+		}
+		for (int i = 0; i < size; i++)
+		{
+			cout << a[i] << " ";
+		}
+	}
+
+	void ege2907array()
+	{
+		int size = 0;
+		cin >> size;
+		int* a = new int[size];
+		int max1 = INT_MIN;
+		int max2 = INT_MIN;
+		for (int i = 0; i < size; i++)
+		{
+			cin >> a[i];
+		}
+		for (int i = 0; i < size; i++)
+		{
+			if (a[i] > max1 && a[i] % 2 == 0)
+			{
+				max1 = a[i];
+			}
+			if (a[i] > max2&& a[i] % 2 != 0)
+			{
+				max2 = a[i];
+			}
+		}
+		int raz = max1 - max2;
+		cout << raz;
+	}
+
+	void ege7936array()
+	{
+		int size = 0;
+		cin >> size;
+		int* a = new int[size];
+		int max1 = INT_MIN;
+		int max2 = INT_MIN;
+		int amount1 = 0;
+		int amount2 = 0;
+		for (int i = 0; i < size; i++)
+		{
+			cin >> a[i];
+		}
+		for (int i = 0; i < size; i++)
+		{
+			if (a[i] % 2 == 0)
+			{
+				++amount1;
+			}
+			else
+			{
+				++amount2;
+			}
+		}
+		for (int i = 0; i < size; i++)
+		{
+			if (a[i] > max1&& a[i] % 2 == 0)
+			{
+				max1 = a[i];
+			}
+			if (a[i] > max2&& a[i] % 2 != 0)
+			{
+				max2 = a[i];
+			}
+		}
+		if (amount1 >= amount2)
+		{
+			cout << max1;
+		}
+		else
+		{
+			cout << max2;
+		}
+	}
+
+	void ege2910()
+	{
+		int size = 0;
+		cin >> size;
+		int** a = new int*[size];
+		for (int i = 0; i < size; i++)
+		{
+			a[i] = new int[size];
+		}
+		for (int row = 0; row < size; row++)
+		{
+			for (int col = 0; col < size; col++)
+			{
+				cin >> a[row][col];
+			}
+		}
+		int sum = 0;
+		for (int row = 0; row < size; row++)
+		{
+			int maxRow = INT_MIN;
+			for (int col = 0; col < size; col++)
+			{
+				if (a[row][col] > maxRow)
+				{
+					maxRow = a[row][col];
+				}
+			}
+			sum = sum + maxRow;
+		}
+		cout << sum;
+	}
 }
