@@ -841,4 +841,211 @@ namespace ege
 		}
 		cout << sum;
 	}
+
+	void ege2919array()
+	{
+		int size = 0;
+		cin >> size;
+		int* a = new int[size];
+		for (int i = 0; i < size; i++)
+		{
+			cin >> a[i];
+		}
+		int max = INT_MIN;
+		int maxind1 = INT_MIN;
+		int maxind2 = INT_MIN;
+		int amount = 0;
+		for (int i = 0; i < size; i++)
+		{
+			if (a[i] > max)
+			{
+				max = a[i];
+				maxind1 = i;
+			}
+
+		}
+		for (int i = 0; i < size; i++)
+		{
+			if (a[i] == max)
+			{
+				maxind2 = i;
+			}
+		}
+		cout << maxind1 << endl << maxind2;
+	}
+
+	void ege2905array()
+	{
+		int size = 0;
+		cin >> size;
+		int* a = new int[size];
+		for (int i = 0; i < size; i++)
+		{
+			cin >> a[i];
+		}
+		int max = INT_MIN;
+		for (int i = 0; i < size; i++)
+		{
+			if (a[i]<0 && a[i]>max)
+			{
+				max = a[i];
+			}
+		}
+		cout << max;
+	}
+
+	void ege9775array()
+	{
+		int size = 0;
+		cin >> size;
+		int* a = new int[size];
+		for (int i = 0; i < size; i++)
+		{
+			cin >> a[i];
+		}
+		int max = INT_MIN;
+		for (int i = 0; i < size-1; i++)
+		{
+			if (a[i] > a[i - 1] && a[i + 1] < a[i] && a[i]>max)
+			{
+				max = a[i];
+			}
+		}
+		cout << max;
+	}
+
+	void ege2937array()
+	{
+		int size = 0;
+		cin >> size;
+		int* a = new int[size];
+		for (int i = 0; i < size; i++)
+		{
+			cin >> a[i];
+		}
+		int max = 0;
+		int amount = 0;
+		for (int i = 0; i < size; i++)
+		{
+			if (a[i] > 1500 && a[i]<2000 && a[i]>max)
+			{
+				amount++;
+				max = a[i];
+			}
+		}
+		if (amount == 0)
+		{
+			cout<< "0";
+		}
+		else
+		{
+			cout << max;
+		}
+	}
+
+	void ege11254array()
+	{
+		int size = 0;
+		cin >> size;
+		int* a = new int[size];
+		for (int i = 0; i < size; i++)
+		{
+			cin >> a[i];
+		}
+		int max1 = INT_MAX;
+		int max2 = INT_MAX;
+		int proizv = 1;
+		for (int i = 0; i < size; i++)
+		{
+			proizv = proizv * a[i];
+			if (a[i] > max1 && a[i] % 2 == 0)
+			{
+				max1 = a[i];
+			}
+			if (a[i] > max2 && a[i] % 2 != 0)
+			{
+				max2 = a[i];
+			}
+		}
+		
+		if (proizv % 2 == 0)
+		{
+			cout << max1;
+		}
+		else
+		{
+			cout << max2;
+		}
+	}
+
+	void ege13421array()
+	{
+		int size = 0;
+		cin >> size;
+		int* a = new int[size];
+		for (int i = 0; i < size; i++)
+		{
+			cin >> a[i];
+		}
+		int max = INT_MIN;
+		for (int i = 0; i < size; i++)
+		{
+			if (len8(a[i]) >= 512 && len8(a[i]) % 10 == 4 && a[i] > max)
+			{
+				max = a[i];
+			}
+		}
+		cout << max;
+	}
+
+	void ege2903array()
+	{
+		int size = 0;
+		cin >> size;
+		int* a = new int[size];
+		for (int i = 0; i < size; i++)
+		{
+			cin >> a[i];
+		}
+		int amount = 0;
+		int max = 0;
+		for (int i = 0; i < size - 1; i++)
+		{
+			if (a[i] > a[i - 1])
+			{
+				amount++;
+			}
+		}
+		if (amount > max)
+		{
+			max = amount;
+		}
+		cout << max;
+	}
+	
+	void ege2920array()
+	{
+		int size = 0;
+		cin >> size;
+		int* a = new int[size];
+		for (int i = 0; i < size; i++)
+		{
+			cin >> a[i];
+		}
+		
+		int nomer1 = 0;
+		int nomer2 = 0;
+		int nomer3 = 0;
+		for (int i = 0; i < size - 1; i++)
+		{
+			if (a[i] > a[i + 1] && a[i] > a[i - 1])
+			{
+				
+				nomer1 = i - 1;
+				nomer2 = i;
+				nomer3 = i + 1;
+			}
+		}
+		cout << nomer1 << endl << nomer2 << endl << nomer3;
+	}
 }
