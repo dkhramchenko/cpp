@@ -24,24 +24,64 @@ namespace task4
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "")
+            string t1 = textBox1.Text;
+            string t2 = textBox2.Text;
+            string t3 = textBox3.Text;
+            if (t1 == "" || t2 == "" || t3 == "")
             {
                 System.Windows.Forms.MessageBox.Show("Неполные данные!");
+                return;
             }
-            else
+            int zapyatayat1 = 0;
+            foreach (var symbol in t1)
             {
-                double previous = Convert.ToDouble(textBox1.Text);
-                double current = Convert.ToDouble(textBox2.Text);
-                double rate = Convert.ToDouble(textBox3.Text);
-                double cash = (current - previous) * rate;
-
-                label5.Text = String.Format("Сумма к оплате: {0:f2}р.", cash);
+                if (symbol == ',')
+                {
+                    ++zapyatayat1;
+                }
+                if (char.IsDigit(symbol) != true && symbol != ',')
+                {
+                    System.Windows.Forms.MessageBox.Show("Данные некорректные!");
+                    return;
+                }
             }
-        }
+            int zapyatayat2 = 0;
+            foreach (var symbol in t2)
+            {
+                if (symbol == ',')
+                {
+                    ++zapyatayat2;
+                }
+                if (char.IsDigit(symbol) != true && symbol != ',')
+                {
+                    System.Windows.Forms.MessageBox.Show("Данные некорректные!");
+                    return;
+                }
+            }
+            int zapyatayat3 = 0;
+            foreach (var symbol in t3)
+            {
+                if (symbol == ',')
+                {
+                    ++zapyatayat3;
+                }
+                if (char.IsDigit(symbol) != true && symbol != ',')
+                {
+                    System.Windows.Forms.MessageBox.Show("Данные некорректные!");
+                    return;
+                }
+            }
+            if (zapyatayat1 > 1 || zapyatayat2 > 1 || zapyatayat3 > 1)
+            {
+                System.Windows.Forms.MessageBox.Show("Данные некорректные!");
+                return;
+            }
+            double previous = Convert.ToDouble(textBox1.Text);
+            double current = Convert.ToDouble(textBox2.Text);
+            double rate = Convert.ToDouble(textBox3.Text);
+            double cash = (current - previous) * rate;
 
-        private void TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            label5.Text = String.Format("Сумма к оплате: {0:f2}р.", cash);
         }
     }
 }
