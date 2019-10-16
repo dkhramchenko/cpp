@@ -21,8 +21,6 @@ namespace task1
         {
             radioButton1.Checked = true;
             radioButton2.Checked = false;
-            textBox1.Visible = false;
-            button1.Visible = false;
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
@@ -38,6 +36,20 @@ namespace task1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (textBox1.Text == "")
+            {
+                System.Windows.Forms.MessageBox.Show("Номер факса не введён!");
+                return;
+            }
+            string faks = textBox1.Text;
+            foreach (var symbol in faks)
+            {
+                if (Char.IsDigit(symbol) != true && symbol != ' ')
+                {
+                    System.Windows.Forms.MessageBox.Show("Номер факса некорректный!");
+                    return;
+                }
+            }
             System.Windows.Forms.MessageBox.Show("Ваш факс отправлен!");
         }
 
