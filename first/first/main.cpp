@@ -18,6 +18,6 @@ int main()
 	/*int const size = 6;
 	int a[size];*/
 
-	ege::ege2920array();
+	ege::ege11254array();
 	return 0;
 }
