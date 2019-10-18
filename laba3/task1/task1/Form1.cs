@@ -63,5 +63,10 @@ namespace task1
                 label2.Visible = false;
             }
         }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

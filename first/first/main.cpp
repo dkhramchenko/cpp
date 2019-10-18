@@ -11,11 +11,6 @@ using namespace std;
 
 int main()
 {
-	/*int size = 0;
-	cin >> size;
-	int* a = new int[size];*/
-
-	/*int const size = 6;
-	int a[size];*/
+	
 	return 0;
 }
