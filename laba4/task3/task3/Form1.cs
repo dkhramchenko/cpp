@@ -107,7 +107,8 @@ namespace task3
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //int x = 1 + Convert.ToInt32("2");
+            //textBox1.Text = Convert.ToString(x);
         }
     }
 }

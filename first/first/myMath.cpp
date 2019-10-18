@@ -73,3 +73,38 @@ int max(int* a, int size)
 	}
 	return m;
 }
+
+int max3(int* a, int size)
+{
+	int m1 = INT_MIN;
+	int m2 = INT_MIN;
+	int m3 = INT_MIN;
+
+	for (int i = 0; i < size; i++)
+	{
+		if (a[i] <= m3)
+		{
+			continue;
+		}
+		if (a[i] > m3 && a[i] <= m2)
+		{
+			m3 = a[i];
+			continue;
+		}
+		if (a[i] > m2 && a[i] <= m1)
+		{
+			m3 = m2;
+			m2 = a[i];
+			continue;
+		}
+		if (a[i] > m1)
+		{
+			m3 = m2;
+			m2 = m1;
+			m1 = a[i];
+			continue;
+		}
+	}
+
+	return m3;
+}

@@ -14,3 +14,6 @@ int max(int a1, int a2, int a3, int a4);
 
 // max from array
 int max(int* a, int size);
+
+// third max from array
+int max3(int* a, int size);

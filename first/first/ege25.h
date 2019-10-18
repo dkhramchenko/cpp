@@ -71,12 +71,16 @@ namespace ege
 	void ege9775array();
 
 	void ege2937array();
-	//???
+	
 	void ege11254array();
-	//???
+	
 	void ege13421array();
 
 	void ege2903array();
 
 	void ege2920array();
+
+	void ege2904array();
+
+	void ege2918array();
 }
