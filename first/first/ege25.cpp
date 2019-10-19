@@ -1105,6 +1105,147 @@ namespace ege
 			d1 += a[i][i];
 			d2 += a[i][n - i - 1];
 		}
-		// stroki, stolb, d1, d2 dz
+		// stroki, stolb, d1, d2 
+		for (int i = 0; i < n; i++)
+		{
+			for (int j = 0; j < n; j++)
+			{
+				cin >> a[i][j];
+				if (stolb[i] == stroki[i] == d1 == d2)
+				{
+					cout << "YES";
+				}
+			}
+		}
+	}
+
+	void ege2911()
+	{
+		int size = 0;
+		cin >> size;
+		int* a = new int[size];
+		for (int i = 0; i < size; i++)
+		{
+			cin >> a[i];
+		}
+		int min = INT_MAX;
+		for (int i = 0; i < size; i++)
+		{
+			if (a[i] >= 20 && a[i] < min)
+			{
+				min = a[i];
+			}
+		}
+		cout << min;
+	}
+
+	void ege14284()
+	{
+		int size = 0;
+		cin >> size;
+		int* a = new int[size];
+		for (int i = 0; i < size; i++)
+		{
+			cin >> a[i];
+		}
+		int min = INT_MAX;
+		int amount = 0;
+		for (int i = 0; i < size; i++)
+		{
+			int vos = a[i] % 10;
+			int shes = a[i] % 16;
+			if (vos == shes && a[i] < min)
+			{
+				amount++;
+				min = a[i];
+			}
+		}
+		if (amount == 0)
+		{
+			cout << 10000;
+		}
+		else
+		{
+			cout << min;
+		}
+	}
+
+	void ege18804()
+	{
+		int size = 0;
+		cin >> size;
+		int* a = new int[size];
+		for (int i = 0; i < size; i++)
+		{
+			cin >> a[i];
+		}
+		int min = INT_MAX;
+		for (int i = 0; i < size; i++)
+		{
+			if (a[i] < min && a[i] % 4 == 0)
+			{
+				min = a[i];
+			}
+		}
+		for (int i = 0; i < size; i++)
+		{
+			if (a[i] % 4 == 0)
+			{
+				a[i] = min;
+			}
+		}
+		for (int i = 0; i < size; i++)
+		{
+			cout << a[i] <<" ";
+		}
+	}
+
+	void ege13501()
+	{
+		int size = 0;
+		cin >> size;
+		int* a = new int[size];
+		for (int i = 0; i < size; i++)
+		{
+			cin >> a[i];
+		}
+		int max = INT_MIN;
+		int amount = 0;
+		for (int i = 0; i < size; i++)
+		{
+			if (a[i] >= 16 && a[i]<256 && a[i]>max)
+			{
+				amount++;
+				max = a[i];
+			}
+		}
+		if (amount == 0)
+		{
+			cout << 0;
+		}
+		else
+		{
+			cout << max;
+		}
+	}
+
+	void ege13609()
+	{
+		int size = 0;
+		cin >> size;
+		int* a = new int[size];
+		for (int i = 0; i < size; i++)
+		{
+			cin >> a[i];
+		}
+		int amount = 0;
+		for (int i = 0; i < size; i++)
+		{
+			if (a[i] >= 16 && a[i] <= 255 && a[i] % 16 >= 10)
+			{
+				amount++;
+			}
+		}
+		cout << amount;
 	}
 }

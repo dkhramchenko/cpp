@@ -11,6 +11,6 @@ using namespace std;
 
 int main()
 {
-	
+	ege::ege13609();
 	return 0;
 }
