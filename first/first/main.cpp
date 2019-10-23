@@ -6,11 +6,12 @@
 #include "massiv.h"
 #include "sequence.h"
 #include "ege25.h"
+#include "ege27couple.h"
 
 using namespace std;
 
 int main()
 {
-	ege::ege13609();
+	ege27couple::task11363();
 	return 0;
 }

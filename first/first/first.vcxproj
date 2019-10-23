@@ -125,6 +125,7 @@
   <ItemGroup>
     <ClCompile Include="combinatorics.cpp" />
     <ClCompile Include="ege25.cpp" />
+    <ClCompile Include="ege27couple.cpp" />
     <ClCompile Include="inputOutput.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="massiv.cpp" />
@@ -135,6 +136,7 @@
   <ItemGroup>
     <ClInclude Include="combinatorics.h" />
     <ClInclude Include="ege25.h" />
+    <ClInclude Include="ege27couple.h" />
     <ClInclude Include="introduction.h" />
     <ClInclude Include="massiv.h" />
     <ClInclude Include="myMath.h" />
