@@ -1074,6 +1074,13 @@ namespace ege
 		{
 			a[i] = new int[n];
 		}
+		for (int i = 0; i < n; i++)
+		{
+			for (int j = 0; j < n; j++)
+			{
+				cin >> a[i][j];
+			}
+		}
 
 		int* stroki = new int[n];
 		int* stolb = new int[n];
@@ -1106,17 +1113,27 @@ namespace ege
 			d2 += a[i][n - i - 1];
 		}
 		// stroki, stolb, d1, d2 
-		for (int i = 0; i < n; i++)
+		
+		bool r = true;
+		for (int i = 0; i < n - 1; i++)
 		{
-			for (int j = 0; j < n; j++)
+			if (stolb[i] != stolb[i + 1] || stroki[i] != stroki[i + 1])
 			{
-				cin >> a[i][j];
-				if (stolb[i] == stroki[i] == d1 == d2)
-				{
-					cout << "YES";
-				}
+				cout << "No";
+				return;
 			}
 		}
+		if (stolb[0] != stroki[0])
+		{
+			cout << "No";
+			return;
+		}
+		if (stroki[0] == d1 && d1 == d2)
+		{
+			cout << "Yes";
+			return;
+		}
+		cout << "No";
 	}
 
 	void ege2911()
