@@ -83,9 +83,9 @@ namespace ege
 	void ege2904array();
 
 	void ege2918array();
-	//?
+	
 	void ege2911();
-	//?
+	
 	void ege14284();
 
 	void ege18804();
