@@ -105,7 +105,7 @@ namespace ege27couple
 		int* a = new int[28];
 		for (int i = 0; i < 28; i++)
 		{
-			a[i]=0;
+			a[i] = 0;
 		}
 		for (int i = 0; i < N; i++)
 		{
@@ -162,4 +162,72 @@ namespace ege27couple
 		}
 		delete[] a;
 	}
+
+	void task13530()
+	{
+		int N = 0;
+		cin >> N;
+		int number = 0;
+		int max = INT_MIN;
+		int max1 = INT_MIN;
+		int* a = new int[10];
+		for (int i = 0; i < 10; i++)
+		{
+			a[i] = 0;
+		}
+		for (int i = 0; i < N; i++)
+		{
+			cin >> number;
+			while (number != 0)
+			{
+				int digit = number % 10;
+				++a[digit];
+				number /= 10;
+			}
+		}
+		for (int i = 0; i < 10; i++)
+		{
+			if (a[i] >= max)
+			{
+				max = a[i];
+			}
+
+		}
+
+
+		cout << max;
+		delete[] a;
+	}
+
+	void task13557()
+	{
+		int number = 0;
+		int sum = 0;
+		int max = INT_MIN;
+		int n = 0;
+		int amount = 0;
+
+		cin >> n;
+
+		for (int i = 0; i < n; i++)
+		{
+			cin >> number;
+			sum += number;
+			if (sum > max && sum % 6 != 0)
+			{
+
+				max = sum;
+				++amount;
+			}
+		}
+
+		if (amount == 0)
+		{
+			cout << 0;
+			return;
+		}
+		cout << amount << sum;
+
+	}
+
 }
