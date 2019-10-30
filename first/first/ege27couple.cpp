@@ -236,4 +236,138 @@ namespace ege27couple
 
 	}
 
+	void task13584()
+	{
+		int number = 0;
+		int n = 0;
+		int sum = 0;
+		int min = INT_MAX;
+		cin >> n;
+		for (int i = 0; i < n; i++)
+		{
+			cin >> number;
+			sum += number;
+			if (number < min && number % 8 != 0)
+			{
+				min = number;
+			}
+		}
+		if (sum % 8 != 0)
+		{
+			cout << n << ' ' << sum;
+			return;
+		}
+		if (min != INT_MAX)
+		{
+			cout << n - 1 << ' ' << sum - min;
+		}
+		else
+		{
+			cout << 0 << ' ' << 0;
+		}
+	}
+
+	int amountOfDigit(int n)
+	{
+		int l = 0;
+		while (n != 0)
+		{
+			++l;
+			n /= 10;
+		}
+		return l;
+	}
+
+	void task13611()
+	{
+		int n = 0;
+		int amount = 0;
+		int number = 0;
+		int max = INT_MIN;
+		int maxInd = INT_MIN;
+		int* a = new int[9];
+		for (int i = 0; i < 9; i++)
+		{
+			a[i] = 0;
+		}
+		cin >> n;
+		for (int i = 0; i < n; i++)
+		{
+			cin >> number;
+			int len = amountOfDigit(number);
+			++a[len];
+		}
+		for (int i = 0; i < 9; i++)
+		{
+			if (a[i] >= max)
+			{
+				max = a[i];
+				maxInd = i;
+			}
+		}
+		cout << maxInd << ' ' << max;
+		delete[] a;
+	}
+
+	void task13638()
+	{
+		int n = 0;
+		int number = 0;
+		int min = INT_MAX;
+		int minInd = INT_MAX;
+		int* a = new int[9];
+		for (int i = 0; i < 9; i++)
+		{
+			a[i] = 0;
+		}
+		cin >> n;
+		for (int i = 0; i < n; i++)
+		{
+			cin >> number;
+			int len = amountOfDigit(number);
+			++a[len];
+		}
+		for (int i = 0; i < 9; i++)
+		{
+			if (a[i] < min && a[i] > 0)
+			{
+				min = a[i];
+				minInd = i;
+			}
+		}
+		cout << minInd << ' ' << min;
+		delete[] a;
+	}
+
+	void task13754()
+	{
+		int n = 0;
+		cin >> n;
+		int n2 = 0;
+		int n13 = 0;
+		int n26 = 0;
+		int number = 0;
+
+		for (int i = 0; i < n; i++)
+		{
+			cin >> number;
+			if (number % 2 == 0 && number % 13 != 0)
+			{
+				++n2;
+				continue;
+			}
+			if (number % 13 == 0 && number % 2 != 0)
+			{
+				++n13;
+				continue;
+			}
+			if (number % 2 == 0 && number % 13 == 0)
+			{
+				++n26;
+				continue;
+			}
+		}
+		int n0 = n - (n2 + n13 + n26);
+		cout << n26 * (n2 + n13 + n0) + n13 * n2;
+	}
 }
