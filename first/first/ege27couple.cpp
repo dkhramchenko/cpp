@@ -153,7 +153,7 @@ namespace ege27couple
 				max = a[i];
 			}
 		}
-		for (int i = 0; i < 10; i++)
+		for (int i = 9; i >= 0; --i)
 		{
 			if (a[i] == max)
 			{
@@ -185,17 +185,19 @@ namespace ege27couple
 				number /= 10;
 			}
 		}
+
+		int maxIndex = INT_MIN;
 		for (int i = 0; i < 10; i++)
 		{
 			if (a[i] >= max)
 			{
 				max = a[i];
+				maxIndex = i;
 			}
-
 		}
 
 
-		cout << max;
+		cout << maxIndex;
 		delete[] a;
 	}
 
@@ -203,9 +205,8 @@ namespace ege27couple
 	{
 		int number = 0;
 		int sum = 0;
-		int max = INT_MIN;
 		int n = 0;
-		int amount = 0;
+		int min = INT_MAX;
 
 		cin >> n;
 
@@ -213,20 +214,25 @@ namespace ege27couple
 		{
 			cin >> number;
 			sum += number;
-			if (sum > max && sum % 6 != 0)
+			if (number < min && number % 6 != 0)
 			{
-
-				max = sum;
-				++amount;
+				min = number;
 			}
 		}
 
-		if (amount == 0)
+		if (sum % 6 != 0)
 		{
-			cout << 0;
+			cout << n << " " << sum;
 			return;
 		}
-		cout << amount << sum;
+		if (min != INT_MAX)
+		{
+			cout << n - 1 << " " << sum - min;
+		}
+		else
+		{
+			cout << 0 << " " << 0;
+		}
 
 	}
 
