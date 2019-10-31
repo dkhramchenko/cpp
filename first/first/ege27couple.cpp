@@ -370,4 +370,96 @@ namespace ege27couple
 		int n0 = n - (n2 + n13 + n26);
 		cout << n26 * (n2 + n13 + n0) + n13 * n2;
 	}
+
+	void task14242()
+	{
+		int N = 0;
+		int number = 0;
+		int max = INT_MIN;
+		int maxInd = 0;
+		cin >> N;
+		int* a = new int[19];
+		for (int i = 0; i < 19; i++)
+		{
+			a[i] = 0;
+		}
+		for (int i = 0; i < N; i++)
+		{
+			cin >> number;
+			int sum = sumOfDigit(number);
+			++a[sum];
+		}
+		for (int i = 0; i < 28; i++)
+		{
+			if (a[i] > max)
+			{
+				max = a[i];
+				maxInd = i;
+			}
+		}
+		cout << maxInd;
+		delete[] a;
+	}
+
+	void task18096()
+	{
+		int n = 0;
+		cin >> n;
+		int n2 = 0;
+		int n31 = 0;
+		int n62 = 0;
+		int number = 0;
+		for (int i = 0; i < n; i++)
+		{
+			cin >> number;
+			if (number % 2 == 0 && number % 31 != 0)
+			{
+				++n2;
+				continue;
+			}
+			if (number % 31 == 0 && number % 2 != 0)
+			{
+				++n31;
+				continue;
+			}
+			if (number % 2 == 0 && number % 31 == 0)
+			{
+				++n62;
+				continue;
+			}
+		}
+		int n0 = n - (n2 + n31 + n62);
+		cout << n62 * (n2 + n31 + n0) + n31 * n2;
+	}
+
+	void task18455()
+	{
+		int n = 0;
+		cin >> n;
+		int n2 = 0;
+		int n5 = 0;
+		int n10 = 0;
+		int number = 0;
+		for (int i = 0; i < n; i++)
+		{
+			cin >> number;
+			if (number % 2 == 0 && number % 5 != 0)
+			{
+				++n2;
+				continue;
+			}
+			if (number % 5 == 0 && number % 2 != 0)
+			{
+				++n5;
+				continue;
+			}
+			if (number % 2 == 0 && number % 5 == 0)
+			{
+				++n10;
+				continue;
+			}
+		}
+		int n0 = n - (n2 + n5 + n10);
+		cout << n10 * (n2 + n5 + n0) + n5 * n2;
+	}
 }

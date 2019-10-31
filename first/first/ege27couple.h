@@ -21,4 +21,10 @@ namespace ege27couple
 	void task13638();
 
 	void task13754();
+	//?? двух последний цифр
+	void task14242();
+
+	void task18096();
+
+	void task18455();
 }
