@@ -386,12 +386,12 @@ namespace ege27couple
 		for (int i = 0; i < N; i++)
 		{
 			cin >> number;
-			int sum = sumOfDigit(number);
+			int sum = number % 10 + (number / 10) % 10;
 			++a[sum];
 		}
-		for (int i = 0; i < 28; i++)
+		for (int i = 0; i < 19; i++)
 		{
-			if (a[i] > max)
+			if (a[i] >= max)
 			{
 				max = a[i];
 				maxInd = i;
@@ -461,5 +461,155 @@ namespace ege27couple
 		}
 		int n0 = n - (n2 + n5 + n10);
 		cout << n10 * (n2 + n5 + n0) + n5 * n2;
+	}
+
+	void task15643()
+	{
+		int N = 0;
+		int number = 0;
+		int n2 = 0;
+		int n17 = 0;
+		int n34 = 0;
+		cin >> N;
+		for (int i = 0; i < N; i++)
+		{
+			cin >> number;
+			if (number % 2 == 0 && number % 17 != 0)
+			{
+				++n2;
+			}
+			if (number % 17 == 0 && number % 2 != 0)
+			{
+				++n17;
+			}
+			if (number % 2 == 0 && number % 17 == 0)
+			{
+				++n34;
+			}
+		}
+		int n0 = N - (n2 + n17 + n34);
+		cout << n0*(1 + n2 + n17);
+	}
+
+	void task15812()
+	{
+		int number = 0;
+		int n = 0;
+		cin >> n;
+		int n1 = 0;
+		int n2 = 0;
+		int n3 = 0;
+		int n4 = 0;
+		for (int i = 0; i < n; i++)
+		{
+			cin >> number;
+			if (number % 3 == 0 && number % 2 == 0)
+			{
+				++n1;
+			}
+			if (number % 3 == 0 && number % 2 != 0)
+			{
+				++n2;
+			}
+			if (number % 3 != 0 && number % 2 == 0)
+			{
+				++n3;
+			}
+			if (number % 3 != 0 && number != 0)
+			{
+				++n4;
+			}
+		}
+		cout << n1 * (n2 + n4) + n3 * n2;
+	}
+
+	void task15867()
+	{
+		int n = 0;
+		cin >> n;
+		int number = 0;
+		int n2 = 0;
+		int n7 = 0;
+		int n14 = 0;
+		int n0 = 0;
+		for (int i = 0; i < n; i++)
+		{
+			cin >> number;
+			if (number % 2 == 0 && number % 7 != 0)
+			{
+				++n2;
+			}
+			if (number % 7 == 0 && number % 2 != 0)
+			{
+				++n7;
+			}
+			if (number % 2 == 0 && number % 7 == 0)
+			{
+				++n14;
+			}
+			if (number % 2 != 0 && number % 7 != 0)
+			{
+				++n0;
+			}
+		}
+		cout << n0 * (n2 + n7) + n2*(n2-1)/2 + n7*(n7-1)/2 + n0*(n0-1)/2;
+	}
+
+	void task15937()
+	{
+		int n = 0;
+		cin >> n;
+		int number = 0;
+		int m1 = 0;
+		int m2 = 0;
+		int m3 = 0;
+		int m4 = 0;
+		for (int i = 0; i < n; i++)
+		{
+			cin >> number;
+			if (number % 3 == 0 && number % 2 == 0 && number > m1)
+			{
+				m1 = number;
+			}
+			if (number % 3 == 0 && number % 2 != 0 && number > m2)
+			{
+				m2 = number;
+			}
+			if (number % 3 != 0 && number % 2 == 0 && number > m3)
+			{
+				m3 = number;
+			}
+			if (number % 3 != 0 && number % 2 != 0 && number > m4)
+			{
+				m4 = number;
+			}
+		}
+		int p1 = m1 * m2;
+		int p2 = m1 * m4;
+		int p3 = m2 * m3;
+
+		if (p1 + p2 + p3 == 0)
+		{
+			cout << 0;
+			return;
+		}
+
+		if (p1 >= p2 && p1 >= p3)
+		{
+			cout << m1 << " " << m2;
+			return;
+		}
+
+		if (p2 >= p1 && p2 >= p3)
+		{
+			cout << m1 << " " << m4;
+			return;
+		}
+
+		if (p3 >= p2 && p3 >= p1)
+		{
+			cout << m2 << " " << m3;
+			return;
+		}
 	}
 }

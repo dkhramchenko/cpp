@@ -27,4 +27,12 @@ namespace ege27couple
 	void task18096();
 
 	void task18455();
+
+	void task15643();
+
+	void task15812();
+
+	void task15867();
+
+	void task15937();
 }
