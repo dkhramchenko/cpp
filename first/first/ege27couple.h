@@ -35,4 +35,14 @@ namespace ege27couple
 	void task15867();
 
 	void task15937();
+	//не получилось минимальный вывести
+	void task14286();
+	//?
+	void task14713();
+	//?
+	void task15122();
+
+	void task15839();
+
+	void task15964();
 }
