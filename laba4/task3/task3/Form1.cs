@@ -19,96 +19,89 @@ namespace task3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || comboBox1.SelectedItem == null || textBox2.Text == "")
+            string t = textBox1.Text;
+            if (t == "" || comboBox1.SelectedItem == null)
             {
                 System.Windows.Forms.MessageBox.Show("Заполните все поля!");
+                return;
             }
-            else
+            int zapyatayat = 0;
+            foreach (var symbol in t)
             {
-                string fuel = comboBox1.SelectedItem.ToString();
-
-                switch (fuel)
+                if (symbol == ',')
                 {
-                    case "92":
-                        {
-                            double tank = Convert.ToDouble(textBox2.Text);
-                            double litr = 50;
-                            double price = litr * tank;
-                            double cash = Convert.ToDouble(textBox1.Text);
-                            double sdacha = cash - price;
-                            if (sdacha < 0)
-                            {
-                                System.Windows.Forms.MessageBox.Show("Не хватает денег!");
-                            }
-                            else
-                            {
-                                label3.Text = String.Format("Литров: {0:f2}\nСумма: {1:f2}р.\nСдача: {2:f2}р.\nЦена за литр: {3:f2}р.",
-                                    tank, cash, sdacha, litr);
-                            }
-                            break;
-                        }
-                    case "95":
-                        {
-                            double tank = Convert.ToDouble(textBox2.Text);
-                            double litr = 60;
-                            double price = litr * tank;
-                            double cash = Convert.ToDouble(textBox1.Text);
-                            double sdacha = cash - price;
-                            if (sdacha < 0)
-                            {
-                                System.Windows.Forms.MessageBox.Show("Не хватает денег!");
-                            }
-                            else
-                            {
-                                label3.Text = String.Format("Литров: {0:f2}\nСумма: {1:f2}р.\nСдача: {2:f2}р.\nЦена за литр: {3:f2}р.",
-                                tank, cash, sdacha, litr);
-                            }
-                            break;
-                        }
-                    case "98":
-                        {
-                            double tank = Convert.ToDouble(textBox2.Text);
-                            double litr = 70;
-                            double price = litr * tank;
-                            double cash = Convert.ToDouble(textBox1.Text);
-                            double sdacha = cash - price;
-                            if (sdacha < 0)
-                            {
-                                System.Windows.Forms.MessageBox.Show("Не хватает денег!");
-                            }
-                            else
-                            {
-                                label3.Text = String.Format("Литров: {0:f2}\nСумма: {1:f2}р.\nСдача: {2:f2}р.\nЦена за литр: {3:f2}р.",
-                                    tank, cash, sdacha, litr);
-                            }
-                            break;
-                        }
-                    case "ДТ":
-                        {
-                            double tank = Convert.ToDouble(textBox2.Text);
-                            double litr = 55;
-                            double price = litr * tank;
-                            double cash = Convert.ToDouble(textBox1.Text);
-                            double sdacha = cash - price;
-                            if (sdacha < 0)
-                            {
-                                System.Windows.Forms.MessageBox.Show("Не хватает денег!");
-                            }
-                            else
-                            {
-                                label3.Text = String.Format("Литров: {0:f2}\nСумма: {1:f2}р.\nСдача: {2:f2}р.\nЦена за литр: {3:f2}р.",
-                                    tank, cash, sdacha, litr);
-                            }
-                            break;
-                        }
+                    ++zapyatayat;
                 }
+                if (char.IsDigit(symbol) != true && symbol != ',')
+                {
+                    System.Windows.Forms.MessageBox.Show("Данные некорректные!");
+                    return;
+                }
+            }
+            if (zapyatayat > 1)
+            {
+                System.Windows.Forms.MessageBox.Show("Данные некорректные!");
+                return;
+            }
+            
+            string fuel = comboBox1.SelectedItem.ToString();
+
+            switch (fuel)
+            {
+                case "92":
+                    {
+                        double priceLitr = 49;
+                        double cash = Convert.ToDouble(textBox1.Text);
+                        double litr = cash / priceLitr;
+                        litr = Convert.ToInt32(100 * litr) / 100.0;
+                        double sdacha = cash - priceLitr * litr;
+                        label3.Text = String.Format(
+                            "Литров: {0:f2}\nСумма: {1:f2}р.\nСдача: {2:f2}р.\nЦена за литр: {3:f2}р.",
+                            litr, cash, sdacha, priceLitr);
+                        break;
+                    }
+                case "95":
+                    {
+                        double priceLitr = 55;
+                        double cash = Convert.ToDouble(textBox1.Text);
+                        double litr = cash / priceLitr;
+                        litr = Convert.ToInt32(100 * litr) / 100.0;
+                        double sdacha = cash - priceLitr * litr;
+                        label3.Text = String.Format(
+                            "Литров: {0:f2}\nСумма: {1:f2}р.\nСдача: {2:f2}р.\nЦена за литр: {3:f2}р.",
+                            litr, cash, sdacha, priceLitr);
+                        break;
+                    }
+                case "98":
+                    {
+                        double priceLitr = 59;
+                        double cash = Convert.ToDouble(textBox1.Text);
+                        double litr = cash / priceLitr;
+                        litr = Convert.ToInt32(100 * litr) / 100.0;
+                        double sdacha = cash - priceLitr * litr;
+                        label3.Text = String.Format(
+                            "Литров: {0:f2}\nСумма: {1:f2}р.\nСдача: {2:f2}р.\nЦена за литр: {3:f2}р.",
+                            litr, cash, sdacha, priceLitr);
+                        break;
+                    }
+                case "ДТ":
+                    {
+                        double priceLitr = 61;
+                        double cash = Convert.ToDouble(textBox1.Text);
+                        double litr = cash / priceLitr;
+                        litr = Convert.ToInt32(100 * litr) / 100.0;
+                        double sdacha = cash - priceLitr * litr;
+                        label3.Text = String.Format(
+                            "Литров: {0:f2}\nСумма: {1:f2}р.\nСдача: {2:f2}р.\nЦена за литр: {3:f2}р.",
+                            litr, cash, sdacha, priceLitr);
+                        break;
+                    }
             }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //int x = 1 + Convert.ToInt32("2");
-            //textBox1.Text = Convert.ToString(x);
+            
         }
     }
 }
