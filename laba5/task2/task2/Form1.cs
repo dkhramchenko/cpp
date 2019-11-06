@@ -22,35 +22,33 @@ namespace task2
             if (textBox1.Text == "")
             {
                 System.Windows.Forms.MessageBox.Show("Введите текст!");
+                return;
             }
-            else
-            {
-                int digit = 0;
-                int uppercase = 0;
-                int lowercase = 0;
-                int special = 0;
+            int digit = 0;
+            int uppercase = 0;
+            int lowercase = 0;
+            int special = 0;
 
-                foreach (var ch in textBox1.Text)
+            foreach (var ch in textBox1.Text)
+            {
+                if (char.IsDigit(ch))
                 {
-                    if (char.IsDigit(ch))
-                    {
-                        ++digit;
-                    }
-                    if (char.IsUpper(ch))
-                    {
-                        ++uppercase;
-                    }
-                    if (char.IsLower(ch))
-                    {
-                        ++lowercase;
-                    }
-                    if (char.IsSymbol(ch))
-                    {
-                        ++special;
-                    }
+                    ++digit;
                 }
-                label2.Text = String.Format("Цифр: {0}\nБольших букв: {1}\nМаленьких букв: {2}\nСпецсимволов: {3}", digit, uppercase, lowercase, special);
+                if (char.IsUpper(ch))
+                {
+                    ++uppercase;
+                }
+                if (char.IsLower(ch))
+                {
+                    ++lowercase;
+                }
+                if (char.IsSymbol(ch))
+                {
+                    ++special;
+                }
             }
+            label2.Text = String.Format("Цифр: {0}\nБольших букв: {1}\nМаленьких букв: {2}\nСпецсимволов: {3}", digit, uppercase, lowercase, special);
         }
     }
 }
