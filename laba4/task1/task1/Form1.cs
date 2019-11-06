@@ -33,6 +33,9 @@ namespace task1
                     fs = FontStyle.Underline;
                     break;
             }
+            //if (checkedListBox1.SelectedItem.ToString() == "Bold") fs = FontStyle.Bold;
+            //else if (checkedListBox1.SelectedItem.ToString() == "Italic") fs = FontStyle.Italic;
+            //else if (checkedListBox1.SelectedItem.ToString() == "Underline") fs = FontStyle.Underline;
             Font font = new Font("Arial", 18, fs);
             label1.Font = font;
         }
