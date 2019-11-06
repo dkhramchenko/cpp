@@ -27,9 +27,9 @@ namespace task22
             {
                 foreach (var ch in textBox1.Text)
                 {
-                    if (char.IsLetter(ch))
+                    if (!char.IsDigit(ch))
                     {
-                        System.Windows.Forms.MessageBox.Show("Пароль не должен содержать буквы!");
+                        System.Windows.Forms.MessageBox.Show("Недопустимые символы в пароле!");
                         return;
                     }
                 }
