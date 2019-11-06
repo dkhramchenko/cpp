@@ -63,6 +63,7 @@
             this.checkBox2.TabIndex = 2;
             this.checkBox2.Text = "Картошка";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBox3
             // 
@@ -107,6 +108,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Кафе";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

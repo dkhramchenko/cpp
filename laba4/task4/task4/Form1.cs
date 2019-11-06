@@ -42,5 +42,23 @@ namespace task4
             }
             label1.Text = String.Format("Стоимость заказа: {0:f2}р.", price);
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            checkBox3.Enabled = false;
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                checkBox3.Enabled = true;
+            }
+            else
+            {
+                checkBox3.Checked = false;
+                checkBox3.Enabled = false;
+            }
+        }
     }
 }
