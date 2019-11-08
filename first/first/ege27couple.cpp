@@ -647,19 +647,26 @@ namespace ege27couple
 	{
 		int number = 0;
 		int n = 0;
-		int sum = 0;
-		int amount = 0;
 		cin >> n;
+		int m[7];
+		for (int i = 0; i < 7; i++)
+		{
+			m[i] = 0;
+		}
 		for (int i = 0; i < n; i++)
 		{
 			cin >> number;
-			sum += number;
+			int ost = number % 7;
+			for (int i = 0; i < 7; i++)
+			{
+				if (i % 7 == ost)
+				{
+					++m[i];
+				}
+			}
 		}
-		if (sum % 7 == 0)
-		{
-			cout << n << ' ' << sum;
-			return;
-		}
+
+		cout << m[1] * m[6] + m[2] * m[5] + m[3] * m[4] + m[0] * (m[0] - 1) / 2;
 	}
 
 	void task15122()
