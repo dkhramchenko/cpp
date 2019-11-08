@@ -617,7 +617,7 @@ namespace ege27couple
 	{
 		int N = 0;
 		int number = 0;
-		int min = INT_MIN;
+		int min = INT_MAX;
 		int minInd = 0;
 		cin >> N;
 		int* a = new int[19];
