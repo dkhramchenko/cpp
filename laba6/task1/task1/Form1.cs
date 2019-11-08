@@ -17,9 +17,10 @@ namespace task1
             InitializeComponent();
         }
 
+        int[] numbers = new int[] { 4, 9, 12, 56, 45 };
+
         private void button1_Click(object sender, EventArgs e)
         {
-            int[] numbers = { 4, 9, 12, 56, 45 };
             foreach (var n in numbers)
             {
                 int index = Array.IndexOf(numbers, n);
