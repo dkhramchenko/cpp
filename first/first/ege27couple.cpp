@@ -667,26 +667,42 @@ namespace ege27couple
 		int number = 0;
 		int n = 0;
 		cin >> n;
+		int n0 = 0;
 		int n1 = 0;
 		int n2 = 0;
 		int n3 = 0;
+		int n4 = 0;
+		int n5 = 0;
+		int n6 = 0;
+		int n7 = 0;
 		for (int i = 0; i < n; i++)
 		{
 			cin >> number;
-			if (number % 2 == 0 && number % 4 != 0)
+			int ost = number % 8;
+			switch (ost)
 			{
+			case 0:
+				++n0;
+				break;
+			case 1:
 				++n1;
-			}
-			if (number % 4 == 0 && number % 2 != 0)
-			{
+			case 2:
 				++n2;
-			}
-			if (number % 2 == 0 && number % 4 ==0)
-			{
+			case 3:
 				++n3;
+			case 4:
+				++n4;
+			case 5:
+				++n5;
+			case 6:
+				++n6;
+			case 7:
+				++n7;
+			default:
+				break;
 			}
 		}
-		cout << n3;
+		cout << n3 * n5 + n1 * n7 + n2 * n6 + n4 * (n4 - 1) / 2;
 	}
 
 	void task15839()
