@@ -36,5 +36,10 @@ namespace task22
                 System.Windows.Forms.MessageBox.Show("Пароль корректен!");
             }
         }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

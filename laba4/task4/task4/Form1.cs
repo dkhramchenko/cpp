@@ -60,5 +60,10 @@ namespace task4
                 checkBox3.Enabled = false;
             }
         }
+
+        private void CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

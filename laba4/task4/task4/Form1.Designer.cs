@@ -53,6 +53,7 @@
             this.checkBox1.TabIndex = 1;
             this.checkBox1.Text = "Сэндвич";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.CheckBox1_CheckedChanged);
             // 
             // checkBox2
             // 

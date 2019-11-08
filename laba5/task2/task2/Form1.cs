@@ -50,5 +50,10 @@ namespace task2
             }
             label2.Text = String.Format("Цифр: {0}\nБольших букв: {1}\nМаленьких букв: {2}\nСпецсимволов: {3}", digit, uppercase, lowercase, special);
         }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
