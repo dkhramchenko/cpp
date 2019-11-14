@@ -12,6 +12,6 @@ using namespace std;
 
 int main()
 {
-	ege27couple::task14286();
+	ege27couple::task15149();
 	return 0;
 }

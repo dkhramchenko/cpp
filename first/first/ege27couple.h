@@ -16,7 +16,7 @@ namespace ege27couple
 
 	void task13584();
 
-	void task13611();
+	void task13611();  
 
 	void task13638();
 
@@ -45,4 +45,8 @@ namespace ege27couple
 	void task15839();
 
 	void task15964();
+
+	void task14788();
+
+	void task15149();
 }

@@ -785,4 +785,57 @@ namespace ege27couple
 		}
 	}
 
+	void task14788()
+	{
+		int number = 0;
+		int n = 0;
+		cin >> n;
+		int m[9];
+		for (int i = 0; i < 9; i++)
+		{
+			m[i] = 0;
+		}
+		for (int i = 0; i < n; i++)
+		{
+			cin >> number;
+			int ost = number % 9;
+			for (int i = 0; i < 9; i++)
+			{
+				if (i % 9 == ost)
+				{
+					++m[i];
+				}
+			}
+		}
+
+		cout << m[1] * m[8] + m[2] * m[7] + m[3] * m[6] + m[4] * m[5] + m[0] * (m[0] - 1) / 2;
+	}
+
+	void task15149()
+	{
+		int number = 0;
+		int n = 0;
+		cin >> n;
+		int m[10];
+		for (int i = 0; i < 10; i++)
+		{
+			m[i] = 0;
+		}
+		for (int i = 0; i < n; i++)
+		{
+			cin >> number;
+			int ost = number % 10;
+			for (int i = 0; i < 10; i++)
+			{
+				if (i % 10 == ost)
+				{
+					++m[i];
+				}
+			}
+		}
+
+		cout << m[1] * m[9] + m[2] * m[8] + m[3] * m[7] + m[4] * m[6] + m[0] * (m[0] - 1) / 2 + m[5] * (m[5] - 1) /2;
+	}
+
+
 }
