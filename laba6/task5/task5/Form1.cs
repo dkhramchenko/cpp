@@ -17,12 +17,14 @@ namespace task5
             InitializeComponent();
         }
 
-        List<int> list;
+        List<int> list = new List<int>() { 19, 23, 29, 19, 12 };
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            list = new List<int>() { 19, 23, 29, 19, 12 };
-            listBox1.DataSource = list;
+            for (int i = 0; i < list.Count; ++i)
+            {
+                listBox1.Items.Add(list[i]);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -30,6 +32,7 @@ namespace task5
             if (textBox1.Text == "")
             {
                 System.Windows.Forms.MessageBox.Show("Введите элемент!");
+                return;
             }
             string t = textBox1.Text;
             foreach (var symbol in t)
@@ -42,7 +45,12 @@ namespace task5
             }
             int el = Convert.ToInt32(t);
             int index = list.IndexOf(el);
-            System.Windows.Forms.MessageBox.Show(index.ToString());
+            if (index == -1)
+            {
+                System.Windows.Forms.MessageBox.Show("Нет такого элемента!");
+                return;
+            }
+            System.Windows.Forms.MessageBox.Show("Индекс первого вхождения = " + index.ToString());
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -50,6 +58,7 @@ namespace task5
             if (textBox1.Text == "")
             {
                 System.Windows.Forms.MessageBox.Show("Введите элемент!");
+                return;
             }
             string t = textBox1.Text;
             foreach (var symbol in t)
@@ -62,13 +71,32 @@ namespace task5
             }
             int el = Convert.ToInt32(t);
             int index = list.LastIndexOf(el);
-            System.Windows.Forms.MessageBox.Show(index.ToString());
+            if (index == -1)
+            {
+                System.Windows.Forms.MessageBox.Show("Нет такого элемента!");
+                return;
+            }
+            System.Windows.Forms.MessageBox.Show("Индекс последнего вхождения = " + index.ToString());
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             list.Sort();
-            listBox1.DataSource = list;
+            listBox1.Items.Clear();
+            for (int i = 0; i < list.Count; ++i)
+            {
+                listBox1.Items.Add(list[i]);
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            list.Reverse();
+            listBox1.Items.Clear();
+            for (int i = 0; i < list.Count; ++i)
+            {
+                listBox1.Items.Add(list[i]);
+            }
         }
     }
 }
