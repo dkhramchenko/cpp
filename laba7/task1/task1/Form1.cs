@@ -27,5 +27,32 @@ namespace task1
             colorDialog1.ShowDialog();
             this.BackColor = colorDialog1.Color;
         }
+
+        private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 fr = new Form2();
+            fr.MdiParent = this;
+            fr.Show();
+        }
+
+        private void каскадомToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.Cascade);
+        }
+
+        private void вертикальноToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.TileVertical);
+        }
+
+        private void горизонтальноToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.TileHorizontal);
+        }
+
+        private void упорядочитьЗначкиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(MdiLayout.ArrangeIcons);
+        }
     }
 }
