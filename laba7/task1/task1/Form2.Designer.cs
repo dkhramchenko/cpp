@@ -48,7 +48,7 @@
             this.оформлениеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 42);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -57,7 +57,7 @@
             this.каталогиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.загрузитьСписокФайловToolStripMenuItem});
             this.каталогиToolStripMenuItem.Name = "каталогиToolStripMenuItem";
-            this.каталогиToolStripMenuItem.Size = new System.Drawing.Size(133, 36);
+            this.каталогиToolStripMenuItem.Size = new System.Drawing.Size(133, 38);
             this.каталогиToolStripMenuItem.Text = "Каталоги";
             // 
             // загрузитьСписокФайловToolStripMenuItem
@@ -72,13 +72,13 @@
             this.оформлениеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.цветФонаToolStripMenuItem});
             this.оформлениеToolStripMenuItem.Name = "оформлениеToolStripMenuItem";
-            this.оформлениеToolStripMenuItem.Size = new System.Drawing.Size(181, 36);
+            this.оформлениеToolStripMenuItem.Size = new System.Drawing.Size(181, 38);
             this.оформлениеToolStripMenuItem.Text = "Оформление";
             // 
             // цветФонаToolStripMenuItem
             // 
             this.цветФонаToolStripMenuItem.Name = "цветФонаToolStripMenuItem";
-            this.цветФонаToolStripMenuItem.Size = new System.Drawing.Size(266, 44);
+            this.цветФонаToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
             this.цветФонаToolStripMenuItem.Text = "Цвет фона";
             this.цветФонаToolStripMenuItem.Click += new System.EventHandler(this.цветФонаToolStripMenuItem_Click);
             // 
