@@ -18,8 +18,10 @@ namespace task2
             InitializeComponent();
         }
 
+        // В поле currentFolderPath будет храниться путь к просматриваемой папке
         private string currentFolderPath;
 
+        // очищает все поля
         private void ClearAllFields()
         {
             listBoxFolders.Items.Clear();
@@ -30,6 +32,7 @@ namespace task2
             textBoxFileSize.Text = "";
         }
 
+        // отображает список папок
         private void DisplayFolderList(string folderFullName)
         {
             DirectoryInfo theFolder = new DirectoryInfo(folderFullName);
@@ -52,6 +55,7 @@ namespace task2
             }
         }
 
+        // Отображает файлы и папки, находящаяся внутри папки textBoxInput
         private void buttonDisplay_Click(object sender, EventArgs e)
         {
             if (textBoxInput.Text == "")
@@ -77,6 +81,7 @@ namespace task2
             MessageBox.Show("Нет файла или папки с именем: " + textBoxInput.Text);
         }
 
+        // Отображает информацию о файле
         private void DisplayFileInfo(string fileFullName)
         {
             FileInfo theFile = new FileInfo(fileFullName);
@@ -89,6 +94,7 @@ namespace task2
             textBoxFileSize.Text = theFile.Length + " bytes";
         }
 
+        // Отображает подробности о выбранном файле
         private void listBoxFiles_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedString = listBoxFiles.SelectedItem.ToString();
@@ -96,6 +102,7 @@ namespace task2
             DisplayFileInfo(fullFileName);
         }
 
+        // Меняет исследоваемую папку на выбранную из листбокса
         private void listBoxFolders_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedString = listBoxFolders.SelectedItem.ToString();
@@ -103,9 +110,20 @@ namespace task2
             DisplayFolderList(fullPathName);
         }
 
+        // Меняет исследоваемую папку на родительскую папку
         private void buttonUp_Click(object sender, EventArgs e)
         {
+            if (textBoxFolder.Text == "")
+            {
+                MessageBox.Show("Пусто!");
+                return;
+            }
             string folderPath = new FileInfo(currentFolderPath).DirectoryName;
+            if (folderPath == null)
+            {
+                MessageBox.Show("Корневой каталог!");
+                return;
+            }
             DisplayFolderList(folderPath);
         }
     }
