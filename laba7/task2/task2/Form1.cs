@@ -126,5 +126,13 @@ namespace task2
             }
             DisplayFolderList(folderPath);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() != DialogResult.Cancel)
+            {
+                textBoxInput.Text = openFileDialog1.FileName;
+            }
+        }
     }
 }
