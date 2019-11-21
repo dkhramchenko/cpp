@@ -38,5 +38,10 @@ namespace task4
                 richTextBox1.Text = "";
             }
         }
+
+        private void ФайлToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
