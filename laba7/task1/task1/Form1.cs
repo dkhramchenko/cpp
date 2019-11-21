@@ -48,5 +48,10 @@ namespace task1
         {
             this.LayoutMdi(MdiLayout.ArrangeIcons);
         }
+
+        private void ФайлToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

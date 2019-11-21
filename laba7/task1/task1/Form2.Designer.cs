@@ -41,14 +41,13 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.каталогиToolStripMenuItem,
             this.оформлениеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 42);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 40);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -59,6 +58,7 @@
             this.каталогиToolStripMenuItem.Name = "каталогиToolStripMenuItem";
             this.каталогиToolStripMenuItem.Size = new System.Drawing.Size(133, 38);
             this.каталогиToolStripMenuItem.Text = "Каталоги";
+            this.каталогиToolStripMenuItem.Click += new System.EventHandler(this.КаталогиToolStripMenuItem_Click);
             // 
             // загрузитьСписокФайловToolStripMenuItem
             // 
@@ -78,7 +78,7 @@
             // цветФонаToolStripMenuItem
             // 
             this.цветФонаToolStripMenuItem.Name = "цветФонаToolStripMenuItem";
-            this.цветФонаToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.цветФонаToolStripMenuItem.Size = new System.Drawing.Size(266, 44);
             this.цветФонаToolStripMenuItem.Text = "Цвет фона";
             this.цветФонаToolStripMenuItem.Click += new System.EventHandler(this.цветФонаToolStripMenuItem_Click);
             // 
@@ -94,8 +94,9 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Filter = "файлы шарп|*.cs|текстовые файлы|*.txt";
-            this.openFileDialog1.InitialDirectory = "C:\\gh\\dasha\\cpp\\laba7\\task1\\task1";
+            this.openFileDialog1.InitialDirectory = "C:\\gh\\cpp\\laba7\\task1\\task1";
             this.openFileDialog1.Multiselect = true;
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialog1_FileOk);
             // 
             // Form2
             // 
@@ -106,7 +107,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "Дочерняя форма";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

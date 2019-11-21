@@ -33,5 +33,15 @@ namespace task1
                 }
             }
         }
+
+        private void КаталогиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OpenFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }
