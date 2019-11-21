@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
-namespace task3
+namespace task4
 {
     public partial class Form1 : Form
     {
@@ -18,19 +18,23 @@ namespace task3
             InitializeComponent();
         }
 
-        private void чтениеИзФайлаFileToolStripMenuItem_Click(object sender, EventArgs e)
+        private void чтениеИзФайлаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() != DialogResult.Cancel)
             {
-                richTextBox1.Text = File.ReadAllText(openFileDialog1.FileName);
+                StreamReader reader = new StreamReader(openFileDialog1.FileName);
+                richTextBox1.Text = reader.ReadToEnd();
+                reader.Close();
             }
         }
 
-        private void записьВФайлFileToolStripMenuItem_Click(object sender, EventArgs e)
+        private void записьВФайлToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (saveFileDialog1.ShowDialog() != DialogResult.Cancel)
             {
-                File.WriteAllText(saveFileDialog1.FileName, richTextBox1.Text);
+                StreamWriter writer = new StreamWriter(saveFileDialog1.FileName, true);
+                writer.WriteLine(richTextBox1.Text);
+                writer.Close();
                 richTextBox1.Text = "";
             }
         }
