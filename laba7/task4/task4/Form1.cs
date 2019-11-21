@@ -35,13 +35,8 @@ namespace task4
                 StreamWriter writer = new StreamWriter(saveFileDialog1.FileName, true);
                 writer.WriteLine(richTextBox1.Text);
                 writer.Close();
-                richTextBox1.Text = "";
+                richTextBox1.Clear();
             }
-        }
-
-        private void ФайлToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

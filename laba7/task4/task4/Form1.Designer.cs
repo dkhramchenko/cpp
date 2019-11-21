@@ -57,7 +57,6 @@
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(91, 38);
             this.файлToolStripMenuItem.Text = "Файл";
-            this.файлToolStripMenuItem.Click += new System.EventHandler(this.ФайлToolStripMenuItem_Click);
             // 
             // чтениеИзФайлаToolStripMenuItem
             // 

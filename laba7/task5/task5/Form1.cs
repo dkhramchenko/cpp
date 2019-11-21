@@ -25,7 +25,7 @@ namespace task5
                 return false;
             }
             int zapytaya = 0;
-            foreach (var ch in textBoxStoimost.Text)
+            foreach (var ch in s)
             {
                 if (!Char.IsDigit(ch) && ch != ',')
                 {

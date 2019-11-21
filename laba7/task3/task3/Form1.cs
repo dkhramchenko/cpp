@@ -31,13 +31,8 @@ namespace task3
             if (saveFileDialog1.ShowDialog() != DialogResult.Cancel)
             {
                 File.WriteAllText(saveFileDialog1.FileName, richTextBox1.Text);
-                richTextBox1.Text = "";
+                richTextBox1.Clear();
             }
-        }
-
-        private void ФайлToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
