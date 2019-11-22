@@ -46,6 +46,8 @@ namespace task1
             {
                 g.DrawEllipse(p, 500 + i, 100, 10 - 2 * i, 200);
             }
+            p.Color = Color.Red;
+            g.FillEllipse(Brushes.Red, new Rectangle(50, 50, 50, 50));
         }
     }
 }
