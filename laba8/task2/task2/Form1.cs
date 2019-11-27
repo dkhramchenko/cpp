@@ -35,8 +35,16 @@ namespace task2
                 else
                 {
                     // Если в коллекции ещё нет 4-х точек, то добавим очередную точку
-                    Pts.Add(new Point(e.X - 5, e.Y - 5, ))
+                    Pts.Add(new Point(e.X, e.Y));
+                    // и нарисуем на поверхности эллипс
+                    g.FillEllipse(Brushes.Red, e.X - 5, e.Y - 5, 10, 10);
                 }
+            }
+            // очистить поверхность и массив при нажатии правой кнопки
+            if (e.Button == MouseButtons.Right)
+            {
+                g.Clear(this.BackColor);
+                Pts.Clear();
             }
         }
     }
