@@ -31,26 +31,22 @@ namespace task6
             // Фоновый цвет для CrossBrush - чёрный
             Brush cb2 = new HatchBrush(HatchStyle.DiagonalBrick, Color.DarkGoldenrod, Color.Cyan);
 
-            e.Graphics.FillEllipse(cb1, 0, 0, 2 * ClientSize.Width / 3, 2 * ClientSize.Height / 3);
-
-            e.Graphics.FillEllipse(cb2, ClientSize.Width / 3, ClientSize.Height / 3, ClientSize.Width / 2, 2 * ClientSize.Height / 3);
-
+            // Ограничивающий прямоугольник для круга
             Rectangle rec = new Rectangle(10, 10, 90, 90);
-
+            
+            // Перо для прорисовки контура
             Pen p = new Pen(Color.RoyalBlue);
 
+            // Рисуем контур эллипса
             e.Graphics.DrawEllipse(p, rec);
 
-            LinearGradientBrush brush = new LinearGradientBrush(rec, Color.RoyalBlue, Color.DeepSkyBlue, LinearGradientMode.Horizontal);
+            // Создаём горизонтальный градиент
+            LinearGradientBrush brush = new LinearGradientBrush(rec, Color.RoyalBlue,
+                Color.DeepSkyBlue, LinearGradientMode.Horizontal);
 
+            // Заливка эллипса градиентом
             e.Graphics.FillEllipse(brush, rec);
-
             e.Graphics.Dispose();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
