@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing;
+using System.Drawing.Drawing2D;
 
 namespace task41
 {
@@ -20,17 +20,15 @@ namespace task41
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Graphics g = this.CreateGraphics();
-            Font f = new Font(Font.FontFamily, 30);
-            g.DrawString("Hello world!", f, Brushes.Brown, 44, 24);
+            Graphics x = this.CreateGraphics();
+            x.DrawString("3аставка!", new Font(Font.FontFamily, 40), Brushes.Red, 44, 24);
             label1.Text = DateTime.Now.ToString();
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            Graphics g = this.CreateGraphics();
-            Font f = new Font(Font.FontFamily, 30);
-            g.DrawString("Hello world!", f, Brushes.Red, 40, 20);
+            Graphics x = this.CreateGraphics();
+            x.DrawString("Заставка!", new Font(Font.FontFamily, 40), Brushes.Black, 40, 20);
         }
     }
 }
