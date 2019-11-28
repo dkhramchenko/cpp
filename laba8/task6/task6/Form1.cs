@@ -25,5 +25,10 @@ namespace task6
             e.Graphics.FillEllipse(br1, 0, 0, 2 * ClientSize.Width / 3, 2 * ClientSize.Height / 3);
             e.Graphics.FillEllipse(br2, ClientSize.Width / 3, ClientSize.Height / 3, ClientSize.Width / 2, 2 * ClientSize.Height / 3);
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

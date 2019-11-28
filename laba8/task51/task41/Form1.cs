@@ -32,5 +32,10 @@ namespace task41
             Font f = new Font(Font.FontFamily, 30);
             g.DrawString("Hello world!", f, Brushes.Red, 40, 20);
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
