@@ -20,15 +20,17 @@ namespace task41
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Graphics x = this.CreateGraphics();
-            x.DrawString("3аставка!", new Font(Font.FontFamily, 40), Brushes.Red, 44, 24);
+            Graphics g = this.CreateGraphics();
+            Font f = new Font(Font.FontFamily, 50);
+            g.DrawString("Hello world!", f, Brushes.Blue, 34, 34);
             label1.Text = DateTime.Now.ToString();
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            Graphics x = this.CreateGraphics();
-            x.DrawString("Заставка!", new Font(Font.FontFamily, 40), Brushes.Black, 40, 20);
+            Graphics g = this.CreateGraphics();
+            Font f = new Font(Font.FontFamily, 50);
+            g.DrawString("Hello world!", f, Brushes.Green, 30, 30);
         }
     }
 }
