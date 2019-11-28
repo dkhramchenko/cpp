@@ -49,5 +49,10 @@ namespace task1
             p.Color = Color.Red;
             g.FillEllipse(Brushes.Red, new Rectangle(50, 50, 50, 50));
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
