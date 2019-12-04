@@ -8,10 +8,12 @@ namespace task7
 {
     public class Car
     {
+        #region Поля класса
         private string brand;
         public string Color;
         private int price;
         public int Weight;
+        #endregion
 
         public int Price { get => price; set => price = value; }
         public string Brand 
@@ -21,9 +23,11 @@ namespace task7
             { 
                 if (Char.IsLower(value[0]))
                 {
-                    string s = value;
-                    s[0] = Char.ToUpper(s[0]);
-                    brand = s;
+                    char ch = value[0];
+                    value = value.Remove(0, 1);
+                    ch = Char.ToUpper(ch);
+                    value = value.Insert(0, ch.ToString());
+                    brand = value;
                 }
             } 
         }

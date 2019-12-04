@@ -19,9 +19,16 @@ namespace task7
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Car c = new Car();
-            c.Brand = "audi";
-            String s = c.Brand;
+            Car car = new Car
+            {
+                Brand = "audi",
+                Color = "red",
+                Price = 123,
+                Weight = 2000
+            };
+            richTextBox1.Text =
+                String.Format("марка: {0}; цвет: {1}; цена: {2}; вес: {3}",
+                car.Brand, car.Color, car.Price, car.Weight);
         }
     }
 }

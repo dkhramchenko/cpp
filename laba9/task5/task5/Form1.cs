@@ -28,8 +28,6 @@ namespace task5
             richTextBox1.Text =
                 String.Format("марка: {0}; цвет: {1}; цена: {2}; вес: {3}",
                 Car.Brand, Car.Color, c.Price, c.Weight);
-            Car.Brand = "Audi";
-
         }
     }
 }
