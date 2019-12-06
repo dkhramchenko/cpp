@@ -30,5 +30,10 @@ namespace task7
                 String.Format("марка: {0}; цвет: {1}; цена: {2}; вес: {3}",
                 car.Brand, car.Color, car.Price, car.Weight);
         }
+
+        private void RichTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

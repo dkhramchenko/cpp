@@ -27,8 +27,9 @@ namespace task7
                     value = value.Remove(0, 1);
                     ch = Char.ToUpper(ch);
                     value = value.Insert(0, ch.ToString());
-                    brand = value;
+                    
                 }
+                brand = value;
             } 
         }
     }
