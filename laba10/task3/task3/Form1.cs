@@ -29,11 +29,29 @@ namespace task3
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            Cars.Add(new Car((textBoxBrand.Text), Convert.ToInt32(textBoxPrice.Text)));
+            if (textBoxBrand.Text == "" || textBoxPrice.Text == "")
+            {
+                MessageBox.Show("Введите данные!");
+                return;
+            }
+            foreach (var ch in textBoxPrice.Text)
+            {
+                if (!Char.IsDigit(ch))
+                {
+                    MessageBox.Show("Некорректная цена!");
+                    return;
+                }
+            }
+            Car car = new Car((textBoxBrand.Text), Convert.ToInt32(textBoxPrice.Text));
+            if (!car.Correct())
+            {
+                MessageBox.Show("Некорректные данные!");
+                return;
+            }
+            Cars.Add(car);
             listBox1.DataSource = null;
             listBox1.DataSource = Cars;
             listBox1.DisplayMember = "Brand";
-            dateTimePicker1.va
         }
     }
 }
