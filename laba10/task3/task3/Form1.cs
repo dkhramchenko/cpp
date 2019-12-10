@@ -20,6 +20,7 @@ namespace task3
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Cars.Add(new Car("audi", 100000));
             listBox1.DataSource = Cars;
             listBox1.DisplayMember = "Brand";
             textBoxSelectedBrand.DataBindings.Add("Text", Cars, "Brand");
@@ -32,6 +33,7 @@ namespace task3
             listBox1.DataSource = null;
             listBox1.DataSource = Cars;
             listBox1.DisplayMember = "Brand";
+            dateTimePicker1.va
         }
     }
 }

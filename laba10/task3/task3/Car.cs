@@ -10,6 +10,7 @@ namespace task3
     {
         private string brand = "";
         private int price = -1;
+        private DateTime productionDate;
         public string Brand
         {
             get => brand;
@@ -49,6 +50,9 @@ namespace task3
                 price = value;
             }
         }
+
+        public DateTime ProductionDate { get => productionDate; set => productionDate = value; }
+
         public bool Correct()
         {
             if (Price < 0 || Brand == "")
