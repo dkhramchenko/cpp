@@ -9,10 +9,12 @@ namespace task4
 {
     public class Car
     {
+        // Поля(здесь хранятся данные объекта)
         public static readonly Color color;
         public static readonly string salonMaterial;
         private string brand = "";
         private int price = -1;
+        // Свойства(позволяют записывать и читать данные полей)
         public string Brand
         {
             get => brand;
@@ -52,13 +54,10 @@ namespace task4
                 price = value;
             }
         }
-        public bool Correct()
+        // Конструкторы(позволяют инициализировать поля объекта значениями)
+        public Car()
         {
-            if (Price < 0 || Brand == "")
-            {
-                return false;
-            }
-            return true;
+
         }
         public Car(string brand, int price)
         {
@@ -68,7 +67,7 @@ namespace task4
         static Car()
         {
             DateTime now = DateTime.Now;
-            if (now.DayOfWeek == DayOfWeek.Saturday || now.DayOfWeek == DayOfWeek.Sunday)
+            if (now.DayOfWeek == DayOfWeek.Wednesday || now.DayOfWeek == DayOfWeek.Sunday)
             {
                 color = Color.Pink;
                 salonMaterial = "Leather";
@@ -78,6 +77,16 @@ namespace task4
                 color = Color.White;
                 salonMaterial = "Cloth";
             }
+        }
+        // разные методы
+        // проверка корректности объекта
+        public bool Correct()
+        {
+            if (Price < 0 || Brand == "")
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

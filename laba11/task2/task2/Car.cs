@@ -8,10 +8,11 @@ namespace task3
 {
     public class Car
     {
-        // Поля(здесь хранятся данные объекта)
+        // Поля
         private string brand = "";
         private int price = -1;
-        // Свойства(позволяют записывать и читать данные полей)
+        private int[] crashesPerYear;
+        // Свойства
         public string Brand
         {
             get => brand;
@@ -51,16 +52,13 @@ namespace task3
                 price = value;
             }
         }
-        // Конструкторы(позволяют инициализировать поля объекта значениями)
-        public Car()
-        { }
+        // Конструкторы
         public Car(string brand, int price)
         {
             this.Brand = brand;
             this.Price = price;
         }
-        // разные методы
-        // проверка корректности объекта
+        // Другие методы
         public bool Correct()
         {
             if (Price < 0 || Brand == "")
@@ -68,6 +66,11 @@ namespace task3
                 return false;
             }
             return true;
+        }
+        // Метод для изучения передачи параметров
+        public double AverageMark(int colEx, int[] marks)
+        {
+            this
         }
     }
 }
