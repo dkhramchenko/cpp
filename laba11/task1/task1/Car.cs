@@ -124,7 +124,7 @@ namespace task1
     }
     public class Lorry : Car
     {
-        int truckLength;
+        public int truckLength;
         // Метод записи
         public void WriteToFile()
         {
