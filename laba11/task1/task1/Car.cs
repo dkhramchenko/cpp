@@ -15,7 +15,7 @@ namespace task1
         private string brand = "";
         private int productionYear = -1;
         private int price = -1;
-        private Image foto;
+        private Image foto = null;
         // Свойства
         public string Brand
         {
@@ -88,7 +88,7 @@ namespace task1
         // Другие методы
         public bool Correct()
         {
-            if (Price < 0 || Brand == "" || productionYear < 0)
+            if (Price < 0 || Brand == "" || productionYear < 0 || foto == null)
             {
                 return false;
             }
@@ -96,7 +96,7 @@ namespace task1
         }
         public string CarText()
         {
-            return String.Format("Марка: {0}; Цена: {1}\n", Brand, Price);
+            return String.Format("Марка: {0}; Цена: {1}; Год выпуска: {2}\n", Brand, Price, ProductionYear);
         }
         public void CarText(TextBox box)
         {
@@ -116,29 +116,11 @@ namespace task1
         public void ShowFoto(PictureBox box)
         {
             box.Image = this.foto;
+            box.SizeMode = PictureBoxSizeMode.StretchImage;
         }
         public void ShowFoto(Form box)
         {
             box.BackgroundImage = this.foto;
-        }
-    }
-    public class Lorry : Car
-    {
-        public int truckLength;
-        // Метод записи
-        public void WriteToFile()
-        {
-            StreamWriter writer = new StreamWriter("C:\\" + this.Brand + ".txt");
-            writer.WriteLine(this.CarText());
-            writer.Close();
-        }
-        // Метод чтения из текстового файла
-        public string ReadFromFile()
-        {
-            StreamReader reader = new StreamReader("C:\\" + this.Brand + ".txt");
-            string s = reader.ReadToEnd();
-            reader.Close();
-            return s;
         }
     }
 }
