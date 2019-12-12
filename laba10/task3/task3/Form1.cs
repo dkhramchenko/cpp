@@ -58,5 +58,10 @@ namespace task3
             listBox1.DataSource = Cars;
             listBox1.DisplayMember = "Brand";
         }
+
+        private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

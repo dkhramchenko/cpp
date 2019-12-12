@@ -67,7 +67,7 @@ namespace task4
         static Car()
         {
             DateTime now = DateTime.Now;
-            if (now.DayOfWeek == DayOfWeek.Wednesday || now.DayOfWeek == DayOfWeek.Sunday)
+            if (now.DayOfWeek == DayOfWeek.Thursday || now.DayOfWeek == DayOfWeek.Sunday)
             {
                 color = Color.Pink;
                 salonMaterial = "Leather";

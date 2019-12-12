@@ -88,6 +88,7 @@
             this.richTextBoxCars.Size = new System.Drawing.Size(439, 346);
             this.richTextBoxCars.TabIndex = 5;
             this.richTextBoxCars.Text = "";
+            this.richTextBoxCars.TextChanged += new System.EventHandler(this.RichTextBoxCars_TextChanged);
             // 
             // label3
             // 

@@ -21,5 +21,10 @@ namespace task4
         {
             richTextBox1.Text = Car.color.Name + " " + Car.salonMaterial;
         }
+
+        private void RichTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

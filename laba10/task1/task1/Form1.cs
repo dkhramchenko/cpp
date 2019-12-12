@@ -46,5 +46,10 @@ namespace task1
                 MessageBox.Show("Некорректные данные!");
             }
         }
+
+        private void RichTextBoxCars_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

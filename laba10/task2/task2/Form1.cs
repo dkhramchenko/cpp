@@ -24,5 +24,10 @@ namespace task2
             richTextBox1.Text += String.Format("Марка: {0}; Цена: {1}\n", c1.Brand, c1.Price);
             richTextBox1.Text += String.Format("Марка: {0}", c2.Brand);
         }
+
+        private void RichTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
