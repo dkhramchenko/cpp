@@ -54,6 +54,8 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "фото машин (*.jpg, *.jpeg, *.png)|";
+            this.openFileDialog1.InitialDirectory = "C:\\gh\\dasha\\cpp\\laba11\\task1\\task1\\fotos";
             // 
             // listBox1
             // 
@@ -245,7 +247,6 @@
             this.Controls.Add(this.listBox1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -59,11 +59,6 @@ namespace task1
             cars.Add(car);
             listBox1.Items.Add(car.CarText());
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-        }
-
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             int i = listBox1.SelectedIndex;
