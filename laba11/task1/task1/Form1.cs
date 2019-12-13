@@ -69,5 +69,10 @@ namespace task1
             textBoxSelectedYear.Text = cars[i].ProductionYear.ToString();
             cars[i].ShowFoto(pictureBox1);
         }
+
+        private void TextBoxBrand_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

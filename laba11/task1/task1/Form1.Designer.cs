@@ -72,6 +72,7 @@
             this.textBoxBrand.Name = "textBoxBrand";
             this.textBoxBrand.Size = new System.Drawing.Size(371, 31);
             this.textBoxBrand.TabIndex = 1;
+            this.textBoxBrand.TextChanged += new System.EventHandler(this.TextBoxBrand_TextChanged);
             // 
             // textBoxPrice
             // 
