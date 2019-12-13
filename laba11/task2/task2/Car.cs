@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace task3
+namespace task2
 {
     public class Car
     {
         // Поля
         private string brand = "";
         private int price = -1;
-        private int[] crashesPerYear;
+        public int[] crashes;
         // Свойства
         public string Brand
         {
@@ -53,7 +53,7 @@ namespace task3
             }
         }
         // Конструкторы
-        public Car(string brand, int price)
+        public Car(int price, string brand = "audi")
         {
             this.Brand = brand;
             this.Price = price;
@@ -67,10 +67,28 @@ namespace task3
             }
             return true;
         }
-        // Метод для изучения передачи параметров
-        public double AverageMark(int colEx, int[] marks)
+        public string CarText()
         {
-            this
+            return String.Format("Марка: {0}; Цена: {1};\n", Brand, Price);
+        }
+        // Метод для изучения передачи параметров
+        public double AverageCrashes(ref int test, int[] crashes)
+        {
+            this.crashes = crashes;
+            test = 10;
+            return crashes.Average();
+        }
+        public void AverageCrashes(int[] crashes, out double res, out string resume)
+        {
+            res = crashes.Average();
+            if (res > 10)
+            {
+                resume = "Битая";
+            }
+            else
+            {
+                resume = "Небитая";
+            }
         }
     }
 }
