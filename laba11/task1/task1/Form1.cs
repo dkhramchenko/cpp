@@ -17,7 +17,7 @@ namespace task1
             InitializeComponent();
         }
 
-        List<Car> cars = new List<Car>(); 
+        public List<Car> cars = new List<Car>(); 
 
         private void buttonChooseFoto_Click(object sender, EventArgs e)
         {
@@ -50,7 +50,9 @@ namespace task1
                     return;
                 }
             }
-            Car car = new Car(textBoxBrand.Text, Convert.ToInt32(textBoxPrice.Text), Convert.ToInt32(textBoxProductionYear.Text), textBoxFoto.Text);
+            Car car = new Car(
+                textBoxBrand.Text, Convert.ToInt32(textBoxPrice.Text),
+                Convert.ToInt32(textBoxProductionYear.Text), textBoxFoto.Text);
             if (!car.Correct())
             {
                 MessageBox.Show("Некорректные данные!");

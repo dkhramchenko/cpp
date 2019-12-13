@@ -55,7 +55,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Filter = "фото машин (*.jpg, *.jpeg, *.png)|";
-            this.openFileDialog1.InitialDirectory = "C:\\gh\\dasha\\cpp\\laba11\\task1\\task1\\fotos";
             // 
             // listBox1
             // 
@@ -205,6 +204,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Location = new System.Drawing.Point(1324, 196);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(983, 570);
