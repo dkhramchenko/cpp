@@ -29,8 +29,20 @@ namespace task2
             int[] crashes = new int[] { 3, 5, 4, 2, 3 };
             int test = 7;
             car3.AverageCrashes(ref test, crashes);
-            richTextBox1.Text += "Тестрирование передачи параметра по ссылке:" + 
-                car3.crashes.Average().ToString() + "; " + test.ToString();
+            richTextBox1.Text += 
+            String.Format(
+                "Тестрирование передачи параметра по ссылке:\n" +
+                "Среднее количество аварий: {0}; test: {1}\n",
+                car3.crashes.Average(), test
+                );
+            string resume;
+            double res;
+            car3.AverageCrashes(crashes: crashes, res: out res, resume: out resume);
+            richTextBox1.Text +=
+                String.Format(
+                    "Тестирование out параметров:\nСреднее количество аварий: {0}; Состояние: {1}",
+                    res, resume
+                    );
         }
     }
 }
