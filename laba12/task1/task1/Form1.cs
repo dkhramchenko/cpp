@@ -23,5 +23,10 @@ namespace task1
             textBox1.Text = car.CarText();
             car.CarText(pictureBox1);
         }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

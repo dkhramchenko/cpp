@@ -44,5 +44,10 @@ namespace task2
                     res, resume
                     );
         }
+
+        private void RichTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
