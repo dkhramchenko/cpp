@@ -19,11 +19,11 @@ namespace task1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Lorry lorry = new Lorry("iveco", 100000, 50000, 2500, 55, 15);
-            richTextBox1.Text += lorry.CarText();
+            ICargoCarrier lorry = new Lorry("iveco", 100000, 50000, 2500, 55, 15);
+            richTextBox1.Text += ((Lorry)lorry).CarText();
             richTextBox1.Text +=
                 String.Format("\nЗапас хода: {0}км; \nМаксимальная длина груза: {1}м; Максимальная масса груза: {2}кг",
-                lorry.TankRange(), lorry.MaxCargoLength(), lorry.MaxCargoWeight());
+                ((Lorry)lorry).TankRange(), ((Lorry)lorry).MaxCargoLength(), ((Lorry)lorry).MaxCargoWeight());
         }
     }
 }
