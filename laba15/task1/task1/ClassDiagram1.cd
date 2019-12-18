@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="task1.Car">
+    <Position X="3" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEBAAAAAQAAAAAAAAAAAAAAAACAAiAAAQAAAAgBAAA=</HashCode>
+      <FileName>Car.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="task1.Lorry">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAgAAAAAAECAAAAAAAAAAAAA=</HashCode>
+      <FileName>Car.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="0.75" Y="4" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="task1.IFuelConsumer">
+    <Position X="0.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAQAAAAgAAAA=</HashCode>
+      <FileName>IFuelConsumer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="task1.ICargoCarrier">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ICargoCarrier.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
