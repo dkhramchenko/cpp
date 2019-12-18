@@ -8,12 +8,11 @@ using System.Drawing;
 
 namespace task1
 {
-    public class Car
+    public class Car : IFuelConsumer
     {
         // Поля
         private string brand = "";
         private int price = -1;
-        public int[] crashes;
         // Свойства
         public string Brand
         {
@@ -54,59 +53,54 @@ namespace task1
                 price = value;
             }
         }
+        public int Weigth { get; set; }
+        public int TankCapacity { get; set; }
+        public int FuelConsumption { get; set; }
         // Конструкторы
-        public Car(int price, string brand = "audi")
+        public Car(string brand, int price, int weight, int tankCapacity, int fuelConsumption)
         {
-            this.Brand = brand;
-            this.Price = price;
+            Brand = brand;
+            Price = price;
+            Weigth = weight;
+            TankCapacity = tankCapacity;
+            FuelConsumption = fuelConsumption;
         }
         public Car() { }
         // Другие методы
-        public bool Correct()
-        {
-            if (Price < 0 || Brand == "")
-            {
-                return false;
-            }
-            return true;
-        }
         public virtual string CarText()
         {
-            return String.Format("Марка: {0}; Цена: {1};", Brand, Price);
+            return String.Format("Марка: {0}; Цена: {1}$; Масса: {2}кг; Бак: {3}л; Расход топлива: {4}л/100км;", 
+                Brand, Price, Weigth, TankCapacity, FuelConsumption);
         }
-        // Метод для изучения передачи параметров
-        public double AverageCrashes(ref int test, int[] crashes)
+        public double TankRange()
         {
-            this.crashes = crashes;
-            test = 10;
-            return crashes.Average();
-        }
-        public void AverageCrashes(int[] crashes, out double res, out string resume)
-        {
-            res = crashes.Average();
-            if (res > 10)
-            {
-                resume = "Битая";
-            }
-            else
-            {
-                resume = "Небитая";
-            }
+            return TankCapacity / FuelConsumption * 100;
         }
     }
 
-    public class Lorry : Car
+    public class Lorry : Car, ICargoCarrier
     {
-        public int truckLength;
+        public int TruckLength { get; set; }
 
-        public Lorry(int price, int truckLength, string brand = "audi"):base(price, brand)
+        public Lorry(string brand, int price, int weight, int tankCapacity, int fuelConsumption,
+            int truckLength) :base(brand, price, weight, tankCapacity, fuelConsumption)
         {
-            this.truckLength = truckLength;
+            TruckLength = truckLength;
         }
 
         public override string CarText()
         {
-            return base.CarText() + String.Format(" Длина прицепа: {0};", truckLength);
+            return base.CarText() + String.Format(" Длина прицепа: {0}м;", TruckLength);
+        }
+
+        public double MaxCargoLength()
+        {
+            return 0.8 * TruckLength;
+        }
+
+        public double MaxCargoWeight()
+        {
+            return 0.8 * Weigth;
         }
     }
 }
