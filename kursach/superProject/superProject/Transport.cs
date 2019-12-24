@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace superProject
 {
@@ -45,14 +46,21 @@ namespace superProject
                 }
             }
         }
+        // свойство для хранения картинки
+        public Image Image
+        {
+            get;
+            set;
+        }
         #endregion properties
 
         #region constructors
         // конструктор
-        public Transport(Brand brand, MainSpecs mainSpecs)
+        public Transport(Brand brand, MainSpecs mainSpecs, Image image)
         {
             Brand = brand;
             MainSpecs = mainSpecs;
+            Image = image;
         }
         #endregion constructors
 
@@ -62,7 +70,7 @@ namespace superProject
         // реализация интерфейса определения корректности объекта
         public virtual bool Correct()
         {
-            if (Brand.Correct() && MainSpecs.Correct())
+            if (Brand.Correct() && MainSpecs.Correct() && Image != null)
             {
                 return true;
             }

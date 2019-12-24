@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace superProject
 {
@@ -41,7 +42,7 @@ namespace superProject
 
         #region constructors
         // сразу два перегруженных конструктора, вызывающих конструктор базового класса
-        public Lorry(Brand brand, MainSpecs mainSpecs, string trucklength = "-1") : base(brand, mainSpecs)
+        public Lorry(Brand brand, MainSpecs mainSpecs, Image image, string trucklength = "-1") : base(brand, mainSpecs, image)
         {
             TruckLength = trucklength;
         }
