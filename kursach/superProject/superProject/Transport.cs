@@ -11,8 +11,8 @@ namespace superProject
     abstract class Transport : ICanBeChekcedForCorrect
     {
         #region fields
-        private Brand brand; // информация о марке
-        private MainSpecs mainSpecs; // основные характеристики
+        private Brand brand = new Brand(); // информация о марке
+        private MainSpecs mainSpecs = new MainSpecs(); // основные характеристики
         #endregion fields
 
         #region properties
@@ -65,8 +65,12 @@ namespace superProject
         #endregion constructors
 
         #region other methods
-        // абстрактный метод для текстового представления объекта
-        public abstract override string ToString();
+        // метод для текстового представления объекта
+        public virtual string ToString(string mode = "short")
+        {
+            return String.Format("Марка: {0}; Цена: {1}; Цвет: {2};",
+                Brand.Name, MainSpecs.Price, MainSpecs.Color);
+        }
         // реализация интерфейса определения корректности объекта
         public virtual bool Correct()
         {

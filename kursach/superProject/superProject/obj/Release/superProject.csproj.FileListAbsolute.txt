@@ -1,0 +1,9 @@
+C:\gh\dasha\cpp\kursach\superProject\superProject\bin\Release\superProject.exe.config
+C:\gh\dasha\cpp\kursach\superProject\superProject\bin\Release\superProject.exe
+C:\gh\dasha\cpp\kursach\superProject\superProject\bin\Release\superProject.pdb
+C:\gh\dasha\cpp\kursach\superProject\superProject\obj\Release\superProject.csprojAssemblyReference.cache
+C:\gh\dasha\cpp\kursach\superProject\superProject\obj\Release\superProject.Form1.resources
+C:\gh\dasha\cpp\kursach\superProject\superProject\obj\Release\superProject.Properties.Resources.resources
+C:\gh\dasha\cpp\kursach\superProject\superProject\obj\Release\superProject.csproj.GenerateResource.cache
+C:\gh\dasha\cpp\kursach\superProject\superProject\obj\Release\superProject.exe
+C:\gh\dasha\cpp\kursach\superProject\superProject\obj\Release\superProject.pdb

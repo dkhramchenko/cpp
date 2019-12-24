@@ -76,11 +76,10 @@ namespace superProject
                     }
                 }
                 int price = Convert.ToInt32(value);
-                if (price <= 0)
+                if (price > 0)
                 {
-                    return;
+                    this.price = price;
                 }
-                this.price = price;
             }
         }
         // свойство для чтения и записи из/в поле yearOfBuild

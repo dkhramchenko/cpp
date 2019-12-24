@@ -75,8 +75,12 @@ namespace superProject
             return false;
         }
         // метод для текстового представления объекта
-        public override string ToString()
+        public override string ToString(string mode = "short")
         {
+            if (mode == "short")
+            {
+                return String.Format("{0} Тип кузова: {1}", base.ToString(), BodyType);
+            }
             return String.Format("Легковой Автомобиль\n" + 
                 "Марка:\n{0}\n" +
                 "Основные характеристики:\n{1}\n" +
