@@ -22,5 +22,10 @@ namespace task5
             Lorry lorry = new Lorry(500, 50);
             richTextBox1.Text += lorry.CarText();
         }
+
+        private void RichTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

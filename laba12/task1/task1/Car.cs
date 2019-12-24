@@ -75,7 +75,7 @@ namespace task1
         }
         public void CarText(PictureBox box)
         {
-            box.Image = Image.FromFile(@"C:audi-a7-ambassador-peredovogo-dizajna.jpg");
+            box.Image = Image.FromFile(@"C:\audi-a7-ambassador-peredovogo-dizajna.jpg");
             box.SizeMode = PictureBoxSizeMode.StretchImage;
         }
         // Метод для изучения передачи параметров

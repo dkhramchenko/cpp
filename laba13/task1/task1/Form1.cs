@@ -25,5 +25,10 @@ namespace task1
                 String.Format("\nЗапас хода: {0}км; \nМаксимальная длина груза: {1}м; Максимальная масса груза: {2}кг",
                 ((Lorry)lorry).TankRange(), ((Lorry)lorry).MaxCargoLength(), ((Lorry)lorry).MaxCargoWeight());
         }
+
+        private void RichTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

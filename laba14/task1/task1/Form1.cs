@@ -29,5 +29,10 @@ namespace task1
                 richTextBox1.Text += car[i].ToString() + " ";
             }
         }
+
+        private void RichTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

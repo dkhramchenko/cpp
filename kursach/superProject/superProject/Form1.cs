@@ -24,5 +24,10 @@ namespace superProject
             Car car = new Car(brand, mainSpecs);
             richTextBox1.Text = car.ToString();
         }
+
+        private void RichTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
