@@ -55,6 +55,8 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="ICanBeChekcedForCorrect.cs" />
+    <Compile Include="ICargoCarrier.cs" />
+    <Compile Include="Lorry.cs" />
     <Compile Include="MainSpecs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
