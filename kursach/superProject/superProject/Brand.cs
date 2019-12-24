@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace superProject
 {
-    class Brand
+    class Brand : ICanBeChekcedForCorrect
     {
         #region fields
         private string name = "";
         private string countryOfOrigin = "";
         private int yearOfBirth = -1;
         #endregion fields
+
         #region properties
         public string Name
         {
@@ -20,7 +21,7 @@ namespace superProject
             {
                 return name;
             }
-            private set
+            set
             {
                 foreach (var ch in value)
                 {
@@ -38,7 +39,7 @@ namespace superProject
             {
                 return countryOfOrigin;
             }
-            private set
+            set
             {
                 foreach (var ch in value)
                 {
@@ -56,7 +57,7 @@ namespace superProject
             {
                 return yearOfBirth.ToString();
             }
-            private set
+            set
             {
                 foreach (var ch in value)
                 {
@@ -64,14 +65,19 @@ namespace superProject
                     {
                         return;
                     }
-                    yearOfBirth = Convert.ToInt32(value);
                 }
+                int yearOfBirth = Convert.ToInt32(value);
+                if (yearOfBirth <= 0)
+                {
+                    return;
+                }
+                this.yearOfBirth = yearOfBirth;
             }
         }
         #endregion properties
 
         #region constructors
-        public Brand(string name, string countryOfOrigin, string yearOfBirth)
+        public Brand(string name = "", string countryOfOrigin = "", string yearOfBirth = "-1")
         {
             Name = name;
             CountryOfOrigin = countryOfOrigin;

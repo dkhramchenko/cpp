@@ -19,11 +19,10 @@ namespace superProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Brand brand = new Brand("audi", "germany", "2009");
-            if (brand.Correct())
-            {
-                richTextBox1.Text = brand.ToString();
-            }
+            Brand brand = new Brand("Audi", "Germany", "1950");
+            MainSpecs mainSpecs = new MainSpecs("2000", "Red", "100000", "2010");
+            Car car = new Car(brand, mainSpecs);
+            richTextBox1.Text = car.ToString();
         }
     }
 }
