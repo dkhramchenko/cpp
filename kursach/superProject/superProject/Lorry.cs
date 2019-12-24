@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace superProject
 {
+    // класс грузовика, наследник транспорта, реализует интерфейс проверки корректности и интерфейс грузоперевозок
     class Lorry : Transport, ICanBeChekcedForCorrect, ICargoCarrier
     {
         #region fields
-        private int truckLength = -1;
+        private int truckLength = -1; // длина прицепа
         #endregion fields
 
         #region properties
+        // свойство для чтения и записи из/в поле truckLength
         public string TruckLength
         { 
             get
@@ -38,6 +40,7 @@ namespace superProject
         #endregion properties
 
         #region constructors
+        // сразу два перегруженных конструктора, вызывающих конструктор базового класса
         public Lorry(Brand brand, MainSpecs mainSpecs, string trucklength = "-1") : base(brand, mainSpecs)
         {
             TruckLength = trucklength;
@@ -45,6 +48,7 @@ namespace superProject
         #endregion
 
         #region other methhods
+        // реализация интерфейса определения корректности объекта
         public override bool Correct()
         {
             if (base.Correct() && TruckLength != "-1")
@@ -53,6 +57,7 @@ namespace superProject
             }
             return false;
         }
+        // метод для текстового представления объекта
         public override string ToString()
         {
             return String.Format("Грузовой автомобиль\n" +
@@ -62,10 +67,12 @@ namespace superProject
                 Brand, MainSpecs, TruckLength
                 );
         }
+        // реализация интерфейса грузоперевозок
         public double maxCargoWeight()
         {
             return 2 * Convert.ToInt32(MainSpecs.Weigth);
         }
+        // реализация интерфейса грузоперевозок
         public double maxCargoLength()
         {
             return 0.8 * truckLength;

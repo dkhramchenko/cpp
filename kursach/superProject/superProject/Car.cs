@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace superProject
 {
+    // класс легкового автомобиля, наследник транспорта, реализует интерфейс проверки корректности
     class Car : Transport, ICanBeChekcedForCorrect
     {
         #region fields
-        private string bodyType = "";
+        private string bodyType = ""; // тип кузова
         #endregion fields
 
         #region properties
+        // свойство для чтения и записи из/в поле bodyType
         public string BodyType 
         { 
             get
@@ -27,13 +29,34 @@ namespace superProject
                     {
                         return;
                     }
-                    bodyType = value;
                 }
+                bodyType = value;
+            }
+        }
+        // индексатор для доступа свойству по имени
+        public string this[string propertyName]
+        {
+            get
+            {
+                if (propertyName == "Brand")
+                {
+                    return Brand.ToString();
+                }
+                if (propertyName == "MainSpecs")
+                {
+                    return MainSpecs.ToString();
+                }
+                if (propertyName == "BodyType")
+                {
+                    return BodyType;
+                }
+                return null;
             }
         }
         #endregion properties
 
         #region constructors
+        // сразу два перегруженных конструктора, вызывающих конструктор базового класса
         public Car(Brand brand, MainSpecs mainSpecs, string bodyType = "sedan") : base(brand, mainSpecs)
         {
             BodyType = bodyType;
@@ -41,6 +64,7 @@ namespace superProject
         #endregion constructors
 
         #region other methods
+        // реализация интерфейса определения корректности объекта
         public override bool Correct()
         {
             if (base.Correct() && bodyType != "")
@@ -49,6 +73,7 @@ namespace superProject
             }
             return false;
         }
+        // метод для текстового представления объекта
         public override string ToString()
         {
             return String.Format("Легковой Автомобиль\n" + 

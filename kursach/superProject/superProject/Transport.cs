@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 
 namespace superProject
 {
+    // абстрактный класс транспорта, реализует интерфейс проверки корректности
     abstract class Transport : ICanBeChekcedForCorrect
     {
         #region fields
-        private Brand brand;
-        private MainSpecs mainSpecs;
+        private Brand brand; // информация о марке
+        private MainSpecs mainSpecs; // основные характеристики
         #endregion fields
 
         #region properties
+        // свойство для чтения и записи из/в поле brand
         public Brand Brand
         {
             get
@@ -28,6 +30,7 @@ namespace superProject
                 }
             }
         }
+        // свойство для чтения и записи из/в поле mainSpecs
         public MainSpecs MainSpecs
         {
             get
@@ -45,6 +48,7 @@ namespace superProject
         #endregion properties
 
         #region constructors
+        // конструктор
         public Transport(Brand brand, MainSpecs mainSpecs)
         {
             Brand = brand;
@@ -53,7 +57,9 @@ namespace superProject
         #endregion constructors
 
         #region other methods
+        // абстрактный метод для текстового представления объекта
         public abstract override string ToString();
+        // реализация интерфейса определения корректности объекта
         public virtual bool Correct()
         {
             if (Brand.Correct() && MainSpecs.Correct())

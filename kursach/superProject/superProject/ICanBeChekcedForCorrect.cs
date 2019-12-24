@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace superProject
 {
-    interface ICanBeChekcedForCorrect
+    // интерфейс для реализации проверки корректности 
+    interface ICanBeChekcedForCorrect 
     {
-        bool Correct();
+        // метод, проверяющий корректность объекта
+        bool Correct(); 
     }
 }

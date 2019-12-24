@@ -6,15 +6,17 @@ using System.Threading.Tasks;
 
 namespace superProject
 {
+    // класс для информации о марке, реализует интерфейс проверки корректности
     class Brand : ICanBeChekcedForCorrect
     {
         #region fields
-        private string name = "";
-        private string countryOfOrigin = "";
-        private int yearOfBirth = -1;
+        private string name = ""; // название марки
+        private string countryOfOrigin = ""; // страна происхождения
+        private int yearOfBirth = -1; // год создания
         #endregion fields
 
         #region properties
+        // свойство для чтения и записи из/в поле name
         public string Name
         {
             get
@@ -33,6 +35,7 @@ namespace superProject
                 name = value;
             }
         }
+        // свойство для чтения и записи из/в поле countryOfOrigin
         public string CountryOfOrigin
         {
             get
@@ -51,6 +54,7 @@ namespace superProject
                 countryOfOrigin = value;
             }
         }
+        // свойство для чтения и записи из/в поле yearOfBirth
         public string YearOfBirth
         {
             get
@@ -67,16 +71,16 @@ namespace superProject
                     }
                 }
                 int yearOfBirth = Convert.ToInt32(value);
-                if (yearOfBirth <= 0)
+                if (yearOfBirth > 0)
                 {
-                    return;
+                    this.yearOfBirth = yearOfBirth;
                 }
-                this.yearOfBirth = yearOfBirth;
             }
         }
         #endregion properties
 
         #region constructors
+        // сразу четыре перегруженных конструктора
         public Brand(string name = "", string countryOfOrigin = "", string yearOfBirth = "-1")
         {
             Name = name;
@@ -86,18 +90,20 @@ namespace superProject
         #endregion constructors
 
         #region other methods
+        // переопределённый метод для текстового представления объекта
         public override string ToString()
         {
             return String.Format("Название: {0}; Страна: {1}; Год создания: {2}",
                 Name, CountryOfOrigin, YearOfBirth);
         }
+        // реализация интерфейса определения корректности объекта
         public bool Correct()
         {
-            if (Name == "" || CountryOfOrigin == "" || YearOfBirth == "-1")
+            if (Name != "" && CountryOfOrigin != "" && YearOfBirth != "-1")
             {
-                return false;
+                return true;
             }
-            return true;
+            return false;
         }
         #endregion
     }

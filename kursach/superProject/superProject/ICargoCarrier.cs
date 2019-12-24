@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace superProject
 {
-    interface ICargoCarrier
+    // интерфейс для перевозящего грузы транспорта
+    interface ICargoCarrier 
     {
+        // метод, вычисляющий максимальный вес груза
         double maxCargoWeight();
-        double maxCargoLength();
+        // метод, вычисляющий максимальную длину груза
+        double maxCargoLength(); 
     }
 }
