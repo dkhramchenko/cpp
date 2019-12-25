@@ -1,15 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="superProject.Transport">
-    <Position X="0.75" Y="0.5" Width="1.5" />
+    <Position X="4" Y="2" Width="1.5" />
+    <AssociationLine Name="MainSpecs1" Type="superProject.MainSpecs" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4" Y="3.313" />
+        <Point X="3.625" Y="3.313" />
+        <Point X="3.625" Y="6.06" />
+        <Point X="2.5" Y="6.06" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Brand1" Type="superProject.Brand" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4" Y="2.875" />
+        <Point X="3.625" Y="2.875" />
+        <Point X="3.625" Y="1.25" />
+        <Point X="2.5" Y="1.25" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAEAAAAAAAAAAAAEgAAAAIAAAAAAABAAAAAAAAAJAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAIAAAAAAABAAAAAAAAANAAA=</HashCode>
       <FileName>Transport.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MainSpecs1" />
+      <Property Name="Brand1" />
+    </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="superProject.Car">
-    <Position X="2.75" Y="2" Width="1.5" />
+    <Position X="6.75" Y="5" Width="1.5" />
+    <InheritanceLine Type="superProject.Transport" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.5" Y="3.688" />
+        <Point X="5.875" Y="3.688" />
+        <Point X="5.875" Y="5.812" />
+        <Point X="6.75" Y="5.812" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAECAAgAAAAIAAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>Car.cs</FileName>
@@ -17,7 +45,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="superProject.Lorry">
-    <Position X="5" Y="0.5" Width="1.5" />
+    <Position X="6.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAAAAAAAAEAAAAAAAQAAIAAAAAAAAACAAIAAA=</HashCode>
       <FileName>Lorry.cs</FileName>
@@ -25,7 +53,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="superProject.Brand" BaseTypeListCollapsed="true">
-    <Position X="11.25" Y="0.5" Width="1.5" />
+    <Position X="1" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAAAAAAAAAAAAAEAAgAAAQAAAAEAAAAAAgAAAQIAAA=</HashCode>
       <FileName>Brand.cs</FileName>
@@ -33,7 +61,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="superProject.MainSpecs">
-    <Position X="9" Y="0.5" Width="1.5" />
+    <Position X="1" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAEAQAABAAEAAAAAIAAAACAAACAAAAAgAAIAAA=</HashCode>
       <FileName>MainSpecs.cs</FileName>
@@ -41,14 +69,14 @@
     <Lollipop Position="0.2" />
   </Class>
   <Interface Name="superProject.ICanBeChekcedForCorrect">
-    <Position X="7.25" Y="0.5" Width="1.5" />
+    <Position X="4" Y="0.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>ICanBeChekcedForCorrect.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="superProject.ICargoCarrier">
-    <Position X="7.25" Y="2" Width="1.5" />
+    <Position X="4" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAIAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ICargoCarrier.cs</FileName>

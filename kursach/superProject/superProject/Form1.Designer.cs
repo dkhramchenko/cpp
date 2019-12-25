@@ -74,6 +74,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.openFileDialogAddImage = new System.Windows.Forms.OpenFileDialog();
+            this.buttonDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTransportImage)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -142,7 +143,7 @@
             // 
             // buttonAddTransport
             // 
-            this.buttonAddTransport.Location = new System.Drawing.Point(108, 850);
+            this.buttonAddTransport.Location = new System.Drawing.Point(112, 835);
             this.buttonAddTransport.Name = "buttonAddTransport";
             this.buttonAddTransport.Size = new System.Drawing.Size(408, 55);
             this.buttonAddTransport.TabIndex = 9;
@@ -385,6 +386,7 @@
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.buttonDelete);
             this.panel4.Controls.Add(this.textBoxAdditionalOut);
             this.panel4.Controls.Add(this.textBoxYearOfBuildOut);
             this.panel4.Controls.Add(this.textBoxPriceOut);
@@ -511,6 +513,17 @@
             this.openFileDialogAddImage.FileName = "openFileDialog1";
             this.openFileDialogAddImage.Filter = "Файлы изображений (*.bmp, *.jpg, *.png)|*.bmp;*.jpg;*.png";
             // 
+            // buttonDelete
+            // 
+            this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonDelete.Location = new System.Drawing.Point(112, 875);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(408, 55);
+            this.buttonDelete.TabIndex = 34;
+            this.buttonDelete.Text = "Удалить";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -587,6 +600,7 @@
         private System.Windows.Forms.TextBox textBoxWeightOutput;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.OpenFileDialog openFileDialogAddImage;
+        private System.Windows.Forms.Button buttonDelete;
     }
 }
 

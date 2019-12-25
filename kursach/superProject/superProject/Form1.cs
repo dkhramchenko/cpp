@@ -110,6 +110,10 @@ namespace superProject
         {
             // узнаём номер объекта
             int i = listBoxOfTransport.SelectedIndex;
+            if (i == -1)
+            {
+                return;
+            }
             // если он типа Car
             if (transportList[i].GetType().Name == "Car")
             {
@@ -137,6 +141,35 @@ namespace superProject
             textBoxColorOut.Text = transportList[i].MainSpecs.Color;
             textBoxPriceOut.Text = transportList[i].MainSpecs.Price;
             textBoxYearOfBuildOut.Text = transportList[i].MainSpecs.YearOfBuild;
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            // проверяем, есть ли, что удалять
+            if (transportList.Count == 0)
+            {
+                MessageBox.Show("Список пуст!");
+                return;
+            }
+            int i = listBoxOfTransport.SelectedIndex;
+            // проверяем выбрано ли, что удалять
+            if (i == -1)
+            {
+                MessageBox.Show("Транспорт не выбран!");
+                return;
+            }
+            // собственно, удаляем
+            listBoxOfTransport.Items.RemoveAt(i);
+            transportList.RemoveAt(i);
+            // очищаем элементы вывода
+            textBoxTransportTypeOut.Clear();
+            pictureBoxTransportImage.Image = null;
+            textBoxBrandOut.Clear();
+            textBoxWeightOutput.Clear();
+            textBoxColorOut.Clear();
+            textBoxPriceOut.Clear();
+            textBoxYearOfBuildOut.Clear();
+            textBoxAdditionalOut.Clear();
         }
     }
 }

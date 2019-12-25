@@ -25,6 +25,22 @@ namespace superProject
             get;
             set;
         }
+
+        internal Brand Brand1
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        internal MainSpecs MainSpecs1
+        {
+            get => default;
+            set
+            {
+            }
+        }
         #endregion properties
 
         #region constructors
