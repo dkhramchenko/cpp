@@ -10,8 +10,8 @@ namespace superProject
     interface ICargoCarrier 
     {
         // метод, вычисляющий максимальный вес груза
-        double maxCargoWeight();
+        double MaxCargoWeight();
         // метод, вычисляющий максимальную длину груза
-        double maxCargoLength(); 
+        double MaxCargoLength(); 
     }
 }
