@@ -107,6 +107,7 @@ namespace superProject
                 if (value == "")
                 {
                     this.yearOfBuild = -1;
+                    return;
                 }
                 foreach (var ch in value)
                 {
