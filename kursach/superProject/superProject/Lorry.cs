@@ -82,12 +82,12 @@ namespace superProject
                 );
         }
         // реализация интерфейса грузоперевозок
-        public double maxCargoWeight()
+        public double MaxCargoWeight()
         {
             return 2 * Convert.ToInt32(this.MainSpecs.Weigth);
         }
         // реализация интерфейса грузоперевозок
-        public double maxCargoLength()
+        public double MaxCargoLength()
         {
             return 0.8 * Convert.ToDouble(this.TruckLength);
         }
