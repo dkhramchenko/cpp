@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace superProject
 {
@@ -10,10 +6,10 @@ namespace superProject
     class MainSpecs : ICanBeChekcedForCorrect
     {
         #region fields
-        private int weigth = -1; // вес
-        private string color = ""; // цвет
-        private int price = -1; // цена
-        private int yearOfBuild = -1; // год выпуска
+        private int weigth; // вес
+        private string color; // цвет
+        private int price; // цена
+        private int yearOfBuild; // год выпуска
         #endregion fields
 
         #region properties
@@ -22,14 +18,20 @@ namespace superProject
         {
             get
             {
-                return weigth.ToString();
+                return this.weigth.ToString();
             }
             set
             {
+                if (value == "")
+                {
+                    this.weigth = -1;
+                    return;
+                }
                 foreach (var ch in value)
                 {
                     if (!Char.IsDigit(ch))
                     {
+                        this.weigth = -1;
                         return;
                     }
                 }
@@ -37,7 +39,9 @@ namespace superProject
                 if (weigth > 0)
                 {
                     this.weigth = weigth;
+                    return;
                 }
+                this.weigth = -1;
             }
         }
         // свойство для чтения и записи из/в поле color
@@ -45,7 +49,7 @@ namespace superProject
         {
             get
             {
-                return color;
+                return this.color;
             }
             set
             {
@@ -53,10 +57,11 @@ namespace superProject
                 {
                     if (!Char.IsLetter(ch))
                     {
+                        this.color = "";
                         return;
                     }
                 }
-                color = value;
+                this.color = value;
             }
         }
         // свойство для чтения и записи из/в поле price
@@ -64,14 +69,20 @@ namespace superProject
         { 
             get
             {
-                return price.ToString();
+                return this.price.ToString();
             }
             set
             {
+                if (value == "")
+                {
+                    this.price = -1;
+                    return;
+                }
                 foreach (var ch in value)
                 {
                     if (!Char.IsDigit(ch))
                     {
+                        this.price = -1;
                         return;
                     }
                 }
@@ -79,7 +90,9 @@ namespace superProject
                 if (price > 0)
                 {
                     this.price = price;
+                    return;
                 }
+                this.price = -1;
             }
         }
         // свойство для чтения и записи из/в поле yearOfBuild
@@ -87,14 +100,19 @@ namespace superProject
         { 
             get
             {
-                return yearOfBuild.ToString();
+                return this.yearOfBuild.ToString();
             }
             set
             {
+                if (value == "")
+                {
+                    this.yearOfBuild = -1;
+                }
                 foreach (var ch in value)
                 {
                     if (!Char.IsDigit(ch))
                     {
+                        this.yearOfBuild = -1;
                         return;
                     }
                 }
@@ -102,20 +120,29 @@ namespace superProject
                 if (yearOfBuild > 0)
                 {
                     this.yearOfBuild = yearOfBuild;
+                    return;
                 }
+                this.yearOfBuild = -1;
             }
         }
         #endregion properties
 
         #region constructors
-        // сразу пять перегруженных конструкторов
-        public MainSpecs(string weight = "-1", string color = "",
-            string price = "-1", string yearOfBuild = "")
+        // конструктор без параметров
+        public MainSpecs()
         {
-            Weigth = weight;
-            Color = color;
-            Price = price;
-            YearOfBuild = yearOfBuild;
+            this.Weigth = "-1";
+            this.Color = "";
+            this.Price = "-1";
+            this.YearOfBuild = "-1";
+        }
+        // перегруженный конструктор
+        public MainSpecs(string weight, string color, string price, string yearOfBuild)
+        {
+            this.Weigth = weight;
+            this.Color = color;
+            this.Price = price;
+            this.YearOfBuild = yearOfBuild;
         }
         #endregion constructors
 
@@ -124,12 +151,12 @@ namespace superProject
         public override string ToString()
         {
             return String.Format("Масса: {0}; Цвет: {1}; Цена: {2}; Год выпуска: {3}",
-                Weigth, Color, Price, YearOfBuild);
+                this.Weigth, this.Color, this.Price, this.YearOfBuild);
         }
         // реализация интерфейса определения корректности объекта
         public bool Correct()
         {
-            if (Weigth != "-1" && Color != "" && Price != "-1")
+            if (this.Weigth != "-1" && this.Color != "" && this.Price != "-1")
             {
                 return true;
             }

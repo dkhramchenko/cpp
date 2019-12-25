@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 
 namespace superProject
@@ -20,7 +16,7 @@ namespace superProject
         { 
             get
             {
-                return bodyType;
+                return this.bodyType;
             }
             set
             {
@@ -28,28 +24,33 @@ namespace superProject
                 {
                     if (!Char.IsLetter(ch))
                     {
+                        this.bodyType = "";
                         return;
                     }
                 }
                 bodyType = value;
             }
         }
-        // индексатор для доступа свойству по имени
+        // индексатор для получения строкового представляния свойств по их имененам
         public string this[string propertyName]
         {
             get
             {
                 if (propertyName == "Brand")
                 {
-                    return Brand.ToString();
+                    return this.Brand.ToString();
                 }
                 if (propertyName == "MainSpecs")
                 {
-                    return MainSpecs.ToString();
+                    return this.MainSpecs.ToString();
+                }
+                if (propertyName == "Image")
+                {
+                    return this.Image.ToString();
                 }
                 if (propertyName == "BodyType")
                 {
-                    return BodyType;
+                    return this.BodyType;
                 }
                 return null;
             }
@@ -57,10 +58,15 @@ namespace superProject
         #endregion properties
 
         #region constructors
-        // сразу два перегруженных конструктора, вызывающих конструктор базового класса
-        public Car(Brand brand, MainSpecs mainSpecs, Image image, string bodyType = "sedan") : base(brand, mainSpecs, image)
+        // конструктор без параметров. Вызывает конструктор без параметров базового класса Transport
+        public Car() : base()
         {
-            BodyType = bodyType;
+            this.BodyType = "";
+        }
+        // перегруженный конструктор. Вызывает перегруженный конструктор базового класса Transport
+        public Car(Brand brand, MainSpecs mainSpecs, Image image, string bodyType) : base(brand, mainSpecs, image)
+        {
+            this.BodyType = bodyType;
         }
         #endregion constructors
 
@@ -68,24 +74,24 @@ namespace superProject
         // реализация интерфейса определения корректности объекта
         public override bool Correct()
         {
-            if (base.Correct() && bodyType != "")
+            if (base.Correct() && this.BodyType != "")
             {
                 return true;
             }
             return false;
         }
-        // метод для текстового представления объекта
+        // переопределённый метод для текстового представления объекта
         public override string ToString(string mode = "short")
         {
             if (mode == "short")
             {
-                return String.Format("{0} Тип кузова: {1}", base.ToString(), BodyType);
+                return String.Format("{0} Тип кузова: {1}", base.ToString(), this.BodyType);
             }
             return String.Format("Легковой Автомобиль\n" + 
                 "Марка:\n{0}\n" +
                 "Основные характеристики:\n{1}\n" +
                 "Тип кузова: {2}\n" ,
-                Brand, MainSpecs, BodyType
+                this.Brand, this.MainSpecs, this.BodyType
                 );
         }
         #endregion other methods

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 
 namespace superProject
@@ -10,43 +6,20 @@ namespace superProject
     // абстрактный класс транспорта, реализует интерфейс проверки корректности
     abstract class Transport : ICanBeChekcedForCorrect
     {
-        #region fields
-        private Brand brand = new Brand(); // информация о марке
-        private MainSpecs mainSpecs = new MainSpecs(); // основные характеристики
-        #endregion fields
-
         #region properties
-        // свойство для чтения и записи из/в поле brand
+        // свойство для чтения и записи информации о марке
         public Brand Brand
         {
-            get
-            {
-                return brand;
-            }
-            set
-            {
-                if (value.Correct())
-                {
-                    brand = value;
-                }
-            }
+            get;
+            set;
         }
-        // свойство для чтения и записи из/в поле mainSpecs
+        // свойство для чтения и записи информации об основных характеристиках
         public MainSpecs MainSpecs
         {
-            get
-            {
-                return mainSpecs;
-            }
-            set
-            {
-                if (value.Correct())
-                {
-                    mainSpecs = value;
-                }
-            }
+            get;
+            set;
         }
-        // свойство для хранения картинки
+        // свойство для чтения и записи картинки
         public Image Image
         {
             get;
@@ -55,12 +28,19 @@ namespace superProject
         #endregion properties
 
         #region constructors
-        // конструктор
+        // конструктор без параметров
+        public Transport()
+        {
+            this.Brand = new Brand();
+            this.MainSpecs = new MainSpecs();
+            this.Image = null;
+        }
+        // перегруженный конструктор
         public Transport(Brand brand, MainSpecs mainSpecs, Image image)
         {
-            Brand = brand;
-            MainSpecs = mainSpecs;
-            Image = image;
+            this.Brand = brand;
+            this.MainSpecs = mainSpecs;
+            this.Image = image;
         }
         #endregion constructors
 
@@ -69,12 +49,12 @@ namespace superProject
         public virtual string ToString(string mode = "short")
         {
             return String.Format("Марка: {0}; Цена: {1}; Цвет: {2};",
-                Brand.Name, MainSpecs.Price, MainSpecs.Color);
+                this.Brand.Name, this.MainSpecs.Price, this.MainSpecs.Color);
         }
         // реализация интерфейса определения корректности объекта
         public virtual bool Correct()
         {
-            if (Brand.Correct() && MainSpecs.Correct() && Image != null)
+            if (this.Brand.Correct() && this.MainSpecs.Correct() && this.Image != null)
             {
                 return true;
             }

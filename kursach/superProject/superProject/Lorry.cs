@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 
 namespace superProject
@@ -11,7 +7,7 @@ namespace superProject
     class Lorry : Transport, ICanBeChekcedForCorrect, ICargoCarrier
     {
         #region fields
-        private int truckLength = -1; // длина прицепа
+        private int truckLength; // длина прицепа
         #endregion fields
 
         #region properties
@@ -20,14 +16,20 @@ namespace superProject
         { 
             get
             {
-                return truckLength.ToString(); 
+                return this.truckLength.ToString(); 
             }
             set
             {
+                if (value == "")
+                {
+                    this.truckLength = -1;
+                    return;
+                }
                 foreach (var ch in value)
                 {
                     if (!Char.IsDigit(ch))
                     {
+                        this.truckLength = -1;
                         return;
                     }
                 }
@@ -35,16 +37,23 @@ namespace superProject
                 if (truckLength > 0)
                 {
                     this.truckLength = truckLength;
+                    return;
                 }
+                this.truckLength = -1;
             }
         }
         #endregion properties
 
         #region constructors
-        // сразу два перегруженных конструктора, вызывающих конструктор базового класса
+        // конструктор без параметров. Вызывает конструктор без параметров базового класса Transport
+        public Lorry() : base()
+        {
+            this.TruckLength = "-1";
+        }
+        // перегруженный конструктор. Вызывает перегруженный конструктор базового класса Transport
         public Lorry(Brand brand, MainSpecs mainSpecs, Image image, string trucklength = "-1") : base(brand, mainSpecs, image)
         {
-            TruckLength = trucklength;
+            this.TruckLength = trucklength;
         }
         #endregion
 
@@ -52,35 +61,35 @@ namespace superProject
         // реализация интерфейса определения корректности объекта
         public override bool Correct()
         {
-            if (base.Correct() && TruckLength != "-1")
+            if (base.Correct() && this.TruckLength != "-1")
             {
                 return true;
             }
             return false;
         }
-        // метод для текстового представления объекта
+        // переопределённый метод для текстового представления объекта
         public override string ToString(string mode = "short")
         {
             if (mode == "short")
             {
-                return String.Format("{0} Длина прицепа: {1}", base.ToString(), TruckLength);
+                return String.Format("{0} Длина прицепа: {1}", base.ToString(), this.TruckLength);
             }
             return String.Format("Грузовой автомобиль\n" +
                 "Марка:\n{0}\n" +
                 "Основные характеристики:\n{1}\n" +
                 "Длина прицепа: {2}\n",
-                Brand, MainSpecs, TruckLength
+                this.Brand, this.MainSpecs, this.TruckLength
                 );
         }
         // реализация интерфейса грузоперевозок
         public double maxCargoWeight()
         {
-            return 2 * Convert.ToInt32(MainSpecs.Weigth);
+            return 2 * Convert.ToInt32(this.MainSpecs.Weigth);
         }
         // реализация интерфейса грузоперевозок
         public double maxCargoLength()
         {
-            return 0.8 * truckLength;
+            return 0.8 * Convert.ToDouble(this.TruckLength);
         }
         #endregion
     }

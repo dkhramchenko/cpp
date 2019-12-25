@@ -68,6 +68,7 @@ namespace superProject
                     return;
                 }
                 listBoxOfTransport.Items.Add(car.ToString());
+                transportList.Add(car);
             }
             if (radioButtonLorry.Checked)
             {
@@ -78,6 +79,17 @@ namespace superProject
                     return;
                 }
                 listBoxOfTransport.Items.Add(lorry.ToString());
+                transportList.Add(lorry);
+            }
+        }
+
+        private void listBoxOfTransport_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int i = listBoxOfTransport.SelectedIndex;
+            pictureBoxTransportImage.Image = transportList[i].Image;
+            if (transportList[i].GetType().Name == "Car")
+            {
+                textBoxTransportTypeOut.Text = "Легковая";
             }
         }
     }

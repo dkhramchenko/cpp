@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace superProject
 {
@@ -10,9 +6,9 @@ namespace superProject
     class Brand : ICanBeChekcedForCorrect
     {
         #region fields
-        private string name = ""; // название марки
-        private string countryOfOrigin = ""; // страна происхождения
-        private int yearOfBirth = -1; // год создания
+        private string name; // название марки
+        private string countryOfOrigin; // страна происхождения
+        private int yearOfBirth; // год создания
         #endregion fields
 
         #region properties
@@ -21,7 +17,7 @@ namespace superProject
         {
             get
             {
-                return name;
+                return this.name;
             }
             set
             {
@@ -29,10 +25,11 @@ namespace superProject
                 {
                     if (!Char.IsLetter(ch))
                     {
+                        this.name = "";
                         return;
                     }
                 }
-                name = value;
+                this.name = value;
             }
         }
         // свойство для чтения и записи из/в поле countryOfOrigin
@@ -40,7 +37,7 @@ namespace superProject
         {
             get
             {
-                return countryOfOrigin;
+                return this.countryOfOrigin;
             }
             set
             {
@@ -48,10 +45,11 @@ namespace superProject
                 {
                     if (!Char.IsLetter(ch))
                     {
+                        this.countryOfOrigin = "";
                         return;
                     }
                 }
-                countryOfOrigin = value;
+                this.countryOfOrigin = value;
             }
         }
         // свойство для чтения и записи из/в поле yearOfBirth
@@ -59,14 +57,20 @@ namespace superProject
         {
             get
             {
-                return yearOfBirth.ToString();
+                return this.yearOfBirth.ToString();
             }
             set
             {
+                if (value == "")
+                {
+                    this.yearOfBirth = -1;
+                    return;
+                }
                 foreach (var ch in value)
                 {
                     if (!Char.IsDigit(ch))
                     {
+                        this.yearOfBirth = -1;
                         return;
                     }
                 }
@@ -74,18 +78,27 @@ namespace superProject
                 if (yearOfBirth > 0)
                 {
                     this.yearOfBirth = yearOfBirth;
+                    return;
                 }
+                this.yearOfBirth = -1;
             }
         }
         #endregion properties
 
         #region constructors
-        // сразу четыре перегруженных конструктора
-        public Brand(string name = "", string countryOfOrigin = "", string yearOfBirth = "-1")
+        // конструктор без параметров
+        public Brand()
         {
-            Name = name;
-            CountryOfOrigin = countryOfOrigin;
-            YearOfBirth = yearOfBirth;
+            this.Name = "";
+            this.CountryOfOrigin = "";
+            this.YearOfBirth = "-1";
+        }
+        // перегруженный конструктор
+        public Brand(string name, string countryOfOrigin, string yearOfBirth)
+        {
+            this.Name = name;
+            this.CountryOfOrigin = countryOfOrigin;
+            this.YearOfBirth = yearOfBirth;
         }
         #endregion constructors
 
@@ -94,12 +107,12 @@ namespace superProject
         public override string ToString()
         {
             return String.Format("Название: {0}; Страна: {1}; Год создания: {2}",
-                Name, CountryOfOrigin, YearOfBirth);
+                this.Name, this.CountryOfOrigin, this.YearOfBirth);
         }
         // реализация интерфейса определения корректности объекта
         public bool Correct()
         {
-            if (Name != "" && CountryOfOrigin != "" && YearOfBirth != "-1")
+            if (this.Name != "" && this.CountryOfOrigin != "" && this.YearOfBirth != "-1")
             {
                 return true;
             }

@@ -38,46 +38,46 @@
             this.textBoxImagePath = new System.Windows.Forms.TextBox();
             this.buttonAddTransport = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.textBoxAdditionalInput = new System.Windows.Forms.TextBox();
+            this.labelAdditionalInput = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.buttonImageInput = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxBrandCountryInput = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.radioButtonCar = new System.Windows.Forms.RadioButton();
             this.radioButtonLorry = new System.Windows.Forms.RadioButton();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBoxBrandCountryInput = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.buttonImageInput = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.labelAdditionalInput = new System.Windows.Forms.Label();
-            this.textBoxAdditionalInput = new System.Windows.Forms.TextBox();
             this.textBoxTransportTypeOut = new System.Windows.Forms.TextBox();
             this.listBoxOfTransport = new System.Windows.Forms.ListBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBoxWeightOutput = new System.Windows.Forms.TextBox();
-            this.textBoxBrandOut = new System.Windows.Forms.TextBox();
-            this.textBoxColorOut = new System.Windows.Forms.TextBox();
-            this.textBoxPriceOut = new System.Windows.Forms.TextBox();
-            this.textBoxYearOfBuildOut = new System.Windows.Forms.TextBox();
             this.textBoxAdditionalOut = new System.Windows.Forms.TextBox();
+            this.textBoxYearOfBuildOut = new System.Windows.Forms.TextBox();
+            this.textBoxPriceOut = new System.Windows.Forms.TextBox();
+            this.textBoxColorOut = new System.Windows.Forms.TextBox();
+            this.textBoxBrandOut = new System.Windows.Forms.TextBox();
+            this.textBoxWeightOutput = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.openFileDialogAddImage = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTransportImage)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -168,6 +168,112 @@
             this.panel1.Size = new System.Drawing.Size(655, 924);
             this.panel1.TabIndex = 18;
             // 
+            // textBoxAdditionalInput
+            // 
+            this.textBoxAdditionalInput.Location = new System.Drawing.Point(219, 773);
+            this.textBoxAdditionalInput.Name = "textBoxAdditionalInput";
+            this.textBoxAdditionalInput.Size = new System.Drawing.Size(396, 31);
+            this.textBoxAdditionalInput.TabIndex = 13;
+            // 
+            // labelAdditionalInput
+            // 
+            this.labelAdditionalInput.AutoSize = true;
+            this.labelAdditionalInput.Location = new System.Drawing.Point(23, 773);
+            this.labelAdditionalInput.Name = "labelAdditionalInput";
+            this.labelAdditionalInput.Size = new System.Drawing.Size(123, 25);
+            this.labelAdditionalInput.TabIndex = 12;
+            this.labelAdditionalInput.Text = "Тип кузова";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(52, 462);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(279, 25);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Основные характеристики";
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.textBoxWeightInput);
+            this.panel3.Controls.Add(this.textBoxYearOfBuildInput);
+            this.panel3.Controls.Add(this.textBoxColorInput);
+            this.panel3.Controls.Add(this.textBoxPriceInput);
+            this.panel3.Location = new System.Drawing.Point(18, 475);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(613, 279);
+            this.panel3.TabIndex = 11;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(27, 202);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(95, 50);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "Год\r\nвыпуска\r\n";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(24, 151);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(64, 25);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Цена";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(27, 84);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 25);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Цвет";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(24, 26);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 25);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Масса";
+            // 
+            // buttonImageInput
+            // 
+            this.buttonImageInput.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonImageInput.Location = new System.Drawing.Point(469, 346);
+            this.buttonImageInput.Name = "buttonImageInput";
+            this.buttonImageInput.Size = new System.Drawing.Size(146, 38);
+            this.buttonImageInput.TabIndex = 10;
+            this.buttonImageInput.Text = "Выбрать";
+            this.buttonImageInput.UseVisualStyleBackColor = true;
+            this.buttonImageInput.Click += new System.EventHandler(this.buttonImageInput_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(39, 353);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(107, 25);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Картинка";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(52, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Марка";
+            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -182,23 +288,30 @@
             this.panel2.Size = new System.Drawing.Size(613, 282);
             this.panel2.TabIndex = 0;
             // 
-            // label2
+            // label5
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Марка";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(19, 188);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 50);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Год\r\nсоздания";
             // 
-            // label1
+            // textBoxBrandCountryInput
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(49, 80);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(256, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Добавление транспорта";
+            this.textBoxBrandCountryInput.Location = new System.Drawing.Point(199, 115);
+            this.textBoxBrandCountryInput.Name = "textBoxBrandCountryInput";
+            this.textBoxBrandCountryInput.Size = new System.Drawing.Size(396, 31);
+            this.textBoxBrandCountryInput.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(19, 97);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(168, 50);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Страна\r\nпроисхождения";
             // 
             // label3
             // 
@@ -208,6 +321,15 @@
             this.label3.Size = new System.Drawing.Size(109, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "Название";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(49, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(256, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Добавление транспорта";
             // 
             // radioButtonCar
             // 
@@ -233,128 +355,6 @@
             this.radioButtonLorry.UseVisualStyleBackColor = true;
             this.radioButtonLorry.CheckedChanged += new System.EventHandler(this.radioButtonLorry_CheckedChanged);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 97);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 50);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Страна\r\nпроисхождения";
-            // 
-            // textBoxBrandCountryInput
-            // 
-            this.textBoxBrandCountryInput.Location = new System.Drawing.Point(199, 115);
-            this.textBoxBrandCountryInput.Name = "textBoxBrandCountryInput";
-            this.textBoxBrandCountryInput.Size = new System.Drawing.Size(396, 31);
-            this.textBoxBrandCountryInput.TabIndex = 5;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 188);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 50);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Год\r\nсоздания";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(39, 353);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 25);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Картинка";
-            // 
-            // buttonImageInput
-            // 
-            this.buttonImageInput.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonImageInput.Location = new System.Drawing.Point(469, 346);
-            this.buttonImageInput.Name = "buttonImageInput";
-            this.buttonImageInput.Size = new System.Drawing.Size(146, 38);
-            this.buttonImageInput.TabIndex = 10;
-            this.buttonImageInput.Text = "Выбрать";
-            this.buttonImageInput.UseVisualStyleBackColor = true;
-            this.buttonImageInput.Click += new System.EventHandler(this.buttonImageInput_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.textBoxWeightInput);
-            this.panel3.Controls.Add(this.textBoxYearOfBuildInput);
-            this.panel3.Controls.Add(this.textBoxColorInput);
-            this.panel3.Controls.Add(this.textBoxPriceInput);
-            this.panel3.Location = new System.Drawing.Point(18, 475);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(613, 279);
-            this.panel3.TabIndex = 11;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(52, 462);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(279, 25);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Основные характеристики";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(24, 26);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 25);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Масса";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(27, 84);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 25);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "Цвет";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(24, 151);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 25);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Цена";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(27, 202);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(95, 50);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Год\r\nвыпуска\r\n";
-            // 
-            // labelAdditionalInput
-            // 
-            this.labelAdditionalInput.AutoSize = true;
-            this.labelAdditionalInput.Location = new System.Drawing.Point(23, 773);
-            this.labelAdditionalInput.Name = "labelAdditionalInput";
-            this.labelAdditionalInput.Size = new System.Drawing.Size(123, 25);
-            this.labelAdditionalInput.TabIndex = 12;
-            this.labelAdditionalInput.Text = "Тип кузова";
-            // 
-            // textBoxAdditionalInput
-            // 
-            this.textBoxAdditionalInput.Location = new System.Drawing.Point(219, 773);
-            this.textBoxAdditionalInput.Name = "textBoxAdditionalInput";
-            this.textBoxAdditionalInput.Size = new System.Drawing.Size(396, 31);
-            this.textBoxAdditionalInput.TabIndex = 13;
-            // 
             // textBoxTransportTypeOut
             // 
             this.textBoxTransportTypeOut.Location = new System.Drawing.Point(33, 49);
@@ -371,6 +371,7 @@
             this.listBoxOfTransport.Name = "listBoxOfTransport";
             this.listBoxOfTransport.Size = new System.Drawing.Size(930, 979);
             this.listBoxOfTransport.TabIndex = 22;
+            this.listBoxOfTransport.SelectedIndexChanged += new System.EventHandler(this.listBoxOfTransport_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -403,50 +404,53 @@
             this.panel4.Size = new System.Drawing.Size(619, 978);
             this.panel4.TabIndex = 24;
             // 
-            // label13
+            // textBoxAdditionalOut
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(28, 430);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(77, 25);
-            this.label13.TabIndex = 22;
-            this.label13.Text = "Марка";
+            this.textBoxAdditionalOut.Location = new System.Drawing.Point(201, 773);
+            this.textBoxAdditionalOut.Name = "textBoxAdditionalOut";
+            this.textBoxAdditionalOut.ReadOnly = true;
+            this.textBoxAdditionalOut.Size = new System.Drawing.Size(396, 31);
+            this.textBoxAdditionalOut.TabIndex = 33;
             // 
-            // label14
+            // textBoxYearOfBuildOut
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(28, 559);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(61, 25);
-            this.label14.TabIndex = 23;
-            this.label14.Text = "Цвет";
+            this.textBoxYearOfBuildOut.Location = new System.Drawing.Point(201, 709);
+            this.textBoxYearOfBuildOut.Name = "textBoxYearOfBuildOut";
+            this.textBoxYearOfBuildOut.ReadOnly = true;
+            this.textBoxYearOfBuildOut.Size = new System.Drawing.Size(396, 31);
+            this.textBoxYearOfBuildOut.TabIndex = 32;
             // 
-            // label15
+            // textBoxPriceOut
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(28, 632);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(64, 25);
-            this.label15.TabIndex = 24;
-            this.label15.Text = "Цена";
+            this.textBoxPriceOut.Location = new System.Drawing.Point(201, 632);
+            this.textBoxPriceOut.Name = "textBoxPriceOut";
+            this.textBoxPriceOut.ReadOnly = true;
+            this.textBoxPriceOut.Size = new System.Drawing.Size(396, 31);
+            this.textBoxPriceOut.TabIndex = 31;
             // 
-            // label16
+            // textBoxColorOut
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(28, 690);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(95, 50);
-            this.label16.TabIndex = 25;
-            this.label16.Text = "Год\r\nвыпуска\r\n";
+            this.textBoxColorOut.Location = new System.Drawing.Point(201, 562);
+            this.textBoxColorOut.Name = "textBoxColorOut";
+            this.textBoxColorOut.ReadOnly = true;
+            this.textBoxColorOut.Size = new System.Drawing.Size(396, 31);
+            this.textBoxColorOut.TabIndex = 30;
             // 
-            // label17
+            // textBoxBrandOut
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(28, 779);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(123, 25);
-            this.label17.TabIndex = 26;
-            this.label17.Text = "Тип кузова";
+            this.textBoxBrandOut.Location = new System.Drawing.Point(202, 430);
+            this.textBoxBrandOut.Name = "textBoxBrandOut";
+            this.textBoxBrandOut.ReadOnly = true;
+            this.textBoxBrandOut.Size = new System.Drawing.Size(396, 31);
+            this.textBoxBrandOut.TabIndex = 29;
+            // 
+            // textBoxWeightOutput
+            // 
+            this.textBoxWeightOutput.Location = new System.Drawing.Point(202, 497);
+            this.textBoxWeightOutput.Name = "textBoxWeightOutput";
+            this.textBoxWeightOutput.ReadOnly = true;
+            this.textBoxWeightOutput.Size = new System.Drawing.Size(396, 31);
+            this.textBoxWeightOutput.TabIndex = 28;
             // 
             // label18
             // 
@@ -457,53 +461,50 @@
             this.label18.TabIndex = 27;
             this.label18.Text = "Масса";
             // 
-            // textBoxWeightOutput
+            // label17
             // 
-            this.textBoxWeightOutput.Location = new System.Drawing.Point(202, 497);
-            this.textBoxWeightOutput.Name = "textBoxWeightOutput";
-            this.textBoxWeightOutput.ReadOnly = true;
-            this.textBoxWeightOutput.Size = new System.Drawing.Size(396, 31);
-            this.textBoxWeightOutput.TabIndex = 28;
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(28, 779);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(123, 25);
+            this.label17.TabIndex = 26;
+            this.label17.Text = "Тип кузова";
             // 
-            // textBoxBrandOut
+            // label16
             // 
-            this.textBoxBrandOut.Location = new System.Drawing.Point(202, 430);
-            this.textBoxBrandOut.Name = "textBoxBrandOut";
-            this.textBoxBrandOut.ReadOnly = true;
-            this.textBoxBrandOut.Size = new System.Drawing.Size(396, 31);
-            this.textBoxBrandOut.TabIndex = 29;
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(28, 690);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(95, 50);
+            this.label16.TabIndex = 25;
+            this.label16.Text = "Год\r\nвыпуска\r\n";
             // 
-            // textBoxColorOut
+            // label15
             // 
-            this.textBoxColorOut.Location = new System.Drawing.Point(201, 562);
-            this.textBoxColorOut.Name = "textBoxColorOut";
-            this.textBoxColorOut.ReadOnly = true;
-            this.textBoxColorOut.Size = new System.Drawing.Size(396, 31);
-            this.textBoxColorOut.TabIndex = 30;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(28, 632);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(64, 25);
+            this.label15.TabIndex = 24;
+            this.label15.Text = "Цена";
             // 
-            // textBoxPriceOut
+            // label14
             // 
-            this.textBoxPriceOut.Location = new System.Drawing.Point(201, 632);
-            this.textBoxPriceOut.Name = "textBoxPriceOut";
-            this.textBoxPriceOut.ReadOnly = true;
-            this.textBoxPriceOut.Size = new System.Drawing.Size(396, 31);
-            this.textBoxPriceOut.TabIndex = 31;
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(28, 559);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(61, 25);
+            this.label14.TabIndex = 23;
+            this.label14.Text = "Цвет";
             // 
-            // textBoxYearOfBuildOut
+            // label13
             // 
-            this.textBoxYearOfBuildOut.Location = new System.Drawing.Point(201, 709);
-            this.textBoxYearOfBuildOut.Name = "textBoxYearOfBuildOut";
-            this.textBoxYearOfBuildOut.ReadOnly = true;
-            this.textBoxYearOfBuildOut.Size = new System.Drawing.Size(396, 31);
-            this.textBoxYearOfBuildOut.TabIndex = 32;
-            // 
-            // textBoxAdditionalOut
-            // 
-            this.textBoxAdditionalOut.Location = new System.Drawing.Point(201, 773);
-            this.textBoxAdditionalOut.Name = "textBoxAdditionalOut";
-            this.textBoxAdditionalOut.ReadOnly = true;
-            this.textBoxAdditionalOut.Size = new System.Drawing.Size(396, 31);
-            this.textBoxAdditionalOut.TabIndex = 33;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(28, 430);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(77, 25);
+            this.label13.TabIndex = 22;
+            this.label13.Text = "Марка";
             // 
             // openFileDialogAddImage
             // 
@@ -528,10 +529,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTransportImage)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
