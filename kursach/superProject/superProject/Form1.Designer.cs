@@ -68,7 +68,7 @@
             this.textBoxBrandOut = new System.Windows.Forms.TextBox();
             this.textBoxWeightOutput = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.labelAdditionalOut = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -367,7 +367,7 @@
             // 
             this.listBoxOfTransport.FormattingEnabled = true;
             this.listBoxOfTransport.ItemHeight = 25;
-            this.listBoxOfTransport.Location = new System.Drawing.Point(707, 22);
+            this.listBoxOfTransport.Location = new System.Drawing.Point(711, 23);
             this.listBoxOfTransport.Name = "listBoxOfTransport";
             this.listBoxOfTransport.Size = new System.Drawing.Size(930, 979);
             this.listBoxOfTransport.TabIndex = 22;
@@ -392,7 +392,7 @@
             this.panel4.Controls.Add(this.textBoxBrandOut);
             this.panel4.Controls.Add(this.textBoxWeightOutput);
             this.panel4.Controls.Add(this.label18);
-            this.panel4.Controls.Add(this.label17);
+            this.panel4.Controls.Add(this.labelAdditionalOut);
             this.panel4.Controls.Add(this.label16);
             this.panel4.Controls.Add(this.label15);
             this.panel4.Controls.Add(this.label14);
@@ -461,14 +461,14 @@
             this.label18.TabIndex = 27;
             this.label18.Text = "Масса";
             // 
-            // label17
+            // labelAdditionalOut
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(28, 779);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(123, 25);
-            this.label17.TabIndex = 26;
-            this.label17.Text = "Тип кузова";
+            this.labelAdditionalOut.AutoSize = true;
+            this.labelAdditionalOut.Location = new System.Drawing.Point(28, 779);
+            this.labelAdditionalOut.Name = "labelAdditionalOut";
+            this.labelAdditionalOut.Size = new System.Drawing.Size(123, 25);
+            this.labelAdditionalOut.TabIndex = 26;
+            this.labelAdditionalOut.Text = "Тип кузова";
             // 
             // label16
             // 
@@ -574,7 +574,7 @@
         private System.Windows.Forms.ListBox listBoxOfTransport;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label labelAdditionalOut;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
