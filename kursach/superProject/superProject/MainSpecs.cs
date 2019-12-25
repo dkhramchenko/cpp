@@ -157,7 +157,7 @@ namespace superProject
         // реализация интерфейса определения корректности объекта
         public bool Correct()
         {
-            if (this.Weigth != "-1" && this.Color != "" && this.Price != "-1")
+            if (this.Weigth != "-1" && this.Color != "" && this.Price != "-1" && this.YearOfBuild != "-1")
             {
                 return true;
             }
